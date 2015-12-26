@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block page_title %}Kyle R. Johnston - Blog{% endblock %}
+
+{% block page_content %}
+  <section>
+    {% for post in posts %}
+      <article>
+        <h1 class="heading">{{ post.title }}</h1>
+        <small class="heading">
+          {{ post.date }}
+          <ul class="tags">
+            {% for tag in post.tags %}
+              <li class="tags"><a class="tags" href="/tags/{{ tag }}">#{{ tag }}</a></li>
+            {% endfor %}
+          </ul>
+        </small>
+        {{ post }}
+      </article>
+    {% endfor %}
+  </section>
+{% endblock %}

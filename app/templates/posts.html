@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>{% block page_title %}{% endblock %}</title>
+    <link rel="stylesheet" href="/static/css/layout.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="header_left">
+          <h1 class="name">Kyle R. Johnston</h1>
+        </div>
+        <div class="header_right">
+          <ul class="nav">
+            <li class="nav"><a href="#" class="nav selected">Blog</a></li>
+            <li class="nav"><a href="#" class="nav">About</a></li>
+            <li class="nav"><a href="#" class="nav">Projects</a></li>
+          </ul>
+        </div>
+      </div>
+      <aside class="hidden">
+        <p>Nav bar will go here</p>
+      </aside>
+      <section>
+        <article>
+          <h1 class="heading">An article title</h1>
+          <small class="heading">24 December 2015&nbsp;
+            <ul class="tags">
+              <li class="tags"><a class="tags" href="#">#something</a></li>
+              <li class="tags"><a class="tags" href="#">#anothertag</a></li>
+            </ul>
+          </small>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at est at est scelerisque scelerisque id vel nisl. Curabitur congue semper nibh in faucibus. Morbi fermentum arcu quam, <a href="#">vitae molestie ex</a> fringilla quis. Quisque placerat urna sodales vulputate molestie. Cras auctor sem a arcu mollis aliquet. Praesent quis luctus elit, eu ornare lacus. Nullam interdum lorem libero, in sollicitudin urna pulvinar nec.</p>
+          <p>Etiam malesuada diam justo, vel pretium lorem efficitur nec. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque maximus ultricies urna non malesuada. Donec id enim non nunc elementum ornare vel non metus. Nam id elit urna. Suspendisse iaculis interdum magna, sed efficitur nulla suscipit vel. Nunc eu nulla ornare, interdum justo sit amet, mollis nulla. Fusce et velit nunc. Nam et purus volutpat, ultricies elit semper, congue mauris. Aenean nec enim nisl.</p>
+          <h2 class="heading">A subtitle</h2>
+          <p>Nullam sed fringilla nulla. Nunc ullamcorper diam id risus luctus interdum. Fusce ultricies urna id aliquam suscipit. Mauris eu laoreet leo, varius varius elit. Duis non faucibus ligula, sed volutpat augue. Praesent ac ultricies dolor. Aliquam eu nisi id erat auctor luctus. Curabitur porttitor gravida neque, eget cursus velit fermentum eget. Sed neque libero, porttitor eget finibus at, pellentesque sit amet massa.</p>
+          <p>Nullam eu ultricies nulla, in finibus dolor. Duis sed dui purus. Aliquam erat volutpat. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum malesuada, neque id accumsan fringilla, quam lorem tristique neque, quis aliquam quam dolor ac purus. Curabitur nec varius purus, vel vehicula nisi. Quisque auctor tempor sem, vitae malesuada dolor porttitor non. Vivamus neque nisi, vulputate quis nibh non, congue imperdiet odio. In suscipit lacinia orci quis convallis. Aliquam sed quam ante. Donec a commodo arcu, ut egestas velit. Nunc condimentum sollicitudin tellus ut convallis.</p>
+        </article>
+      </section>
+      <footer>
+        <p class="footer">Built with Python and Flask.</p>
+        <p class="footer">All content copyright 2015 Kyle Johnston and licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</p>
+      </footer>
+    </div>
+  </body>
+</html>

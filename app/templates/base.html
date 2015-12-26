@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>{% block page_title %}{% endblock %}</title>
+    <link rel="stylesheet" href="/static/css/layout.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="header_left">
+          <h1 class="name">Kyle R. Johnston</h1>
+        </div>
+        <div class="header_right">
+          <ul class="nav">
+            <li class="nav"><a href="/" class="nav">Blog</a></li>
+            <li class="nav"><a href="/about" class="nav">About</a></li>
+            <li class="nav"><a href="/projects" class="nav">Projects</a></li>
+          </ul>
+        </div>
+      </div>
+      <aside class="hidden">
+        <p>Tag navigation will go here</p>
+      </aside>
+      {% block page_content %}{% endblock %}
+      <footer>
+        <p class="footer">Built with Python and Flask.</p>
+        <p class="footer">All content copyright 2015 Kyle Johnston and licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</p>
+      </footer>
+    </div>
+    <script src="/static/js/jquery-2.1.4.js"></script>
+    <script src="/static/js/dostuff.js"></script>
+  </body>
+</html>
