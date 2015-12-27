@@ -1,38 +1,19 @@
-# blog.py
-# Static blog generator
+import datetime
 
-import sys
-from flask import Flask, render_template
-from flask.ext.script import Manager
-from flask_flatpages import FlatPages, pygments_style_defs
-from flask_frozen import Freezer
+class Blog():
+    def __init__(self, flatpages):
+        self.flatpages = flatpages
+        self.posts = [page for page in self.flatpages]
+        self.posts.sort(key = lambda i:
+                        datetime.datetime.strptime(i['date'], '%d %B %Y'),
+                        reverse = True)
+        self.pages = self.get_pages()
 
-DEBUG = True
-FLATPAGES_EXTENSION = '.md'
-FLATPAGES_ROOT = 'content'
-POST_DIR = 'posts'
-app = Flask(__name__)
-manager = Manager(app)
-flatpages = FlatPages(app)
-freezer = Freezer(app)
-app.config.from_object(__name__)
-
-@manager.command
-def build():
-    freezer.freeze()
-
-@app.route('/')
-def posts():
-    posts = [page for page in flatpages]
-    posts.sort(key=lambda item:item['date'], reverse=False)
-    return render_template('blog.html', posts=posts)
-
-@app.route('/posts/<name>')
-def post(name):
-    path = '{}/{}'.format(POST_DIR, name)
-    post = flatpages.get_or_404(path)
-    return render_template('post.html', post=post)
-
-if __name__ == '__main__':
-    manager.run()
-
+    def get_pages(self):
+        pages = []
+        for i in range(5, len(self.posts), 5):
+            pages.append(self.posts[i-5: i])
+        r = len(self.posts) % 5
+        if r > 0:
+            pages.append(self.posts[len(self.posts) - r:])
+        return pages

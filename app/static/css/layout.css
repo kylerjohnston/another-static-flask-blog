@@ -129,6 +129,15 @@ p {
   display: block;
 }
 
+a.post_title {
+  color: #000;
+  text-decoration: none;;
+}
+
+a.post_title:hover {
+  color: #000;
+}
+
 h1.heading {
   font-size: 3em;
 }
@@ -167,4 +176,27 @@ a.tags {
   text-decoration: none;
 }
 
+a.page_button {
+  color: #137495;
+  text-decoration: none;
+  padding: 10px 10px 10px 10px;
+  border: 1px solid #137495;
+  border-radius: 4px;
+  moz-border-radius: 4px;
+  webkit-border-radius: 4px;
+}
 
+a.page_button:hover {
+  color: #0d5168;
+  border: 2px solid #0d5168;
+}
+
+a.dead_button {
+  color: #c1c1c1;
+  text-decoration: none;
+  padding: 10px 10px 10px 10px;
+  border: 1px solid #c1c1c1;
+  border-radius: 4px;
+  moz-border-radius: 4px;
+  webkit-border-radius: 4px;
+}
