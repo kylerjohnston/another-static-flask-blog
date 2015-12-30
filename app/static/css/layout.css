@@ -6,6 +6,11 @@
   -webkit-box-sizing: border-box;
 }
 
+#cloud {
+  max-width: 500px;
+  height: 400px;
+}
+
 .header {
   position: relative;
   top: 0px;
@@ -125,6 +130,11 @@ p {
   font-family: Garamond, Georgia, serif;
 }
 
+ul, li {
+  font-family: Garamond, Georgia, serif;
+  padding: 3px;
+}
+
 .heading {
   display: block;
 }
@@ -142,6 +152,18 @@ h1.heading {
   font-size: 3em;
 }
 
+h1 {
+  font-size: 3em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.5 em;
+}
+
 h2.heading {
   font-size: 2em;
 }
@@ -150,7 +172,6 @@ small.heading {
   font-family: Helvetica, sans-serif;
   font-size: .75em;
   display: inline;
-  font-style: italic;
   color: #666666;
 }
 
@@ -173,6 +194,7 @@ a:hover {
 }
 
 a.tags {
+  font-family: Helvetica;
   text-decoration: none;
 }
 
@@ -199,4 +221,41 @@ a.dead_button {
   border-radius: 4px;
   moz-border-radius: 4px;
   webkit-border-radius: 4px;
+}
+
+small.tag_date {
+  font-family: Helvetica;
+  font-size: 0.75em;
+  display: block;
+  font-style: italic;
+  color: #666666;
+}
+
+a.tag_list {
+  font-family: Garamond;
+  font-size: 1.25em;
+  color: #137495;
+  text-decoration: none;
+}
+
+a.tag_list:hover {
+  color: #0d5168;
+  font-weight: bold;
+}
+
+table {
+  font-family: Helvetica;
+  color: #000;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  border-spacing: 0;
+}
+
+td {
+  padding: 10px;
+}
+
+tr:nth-child(even) {
+  background-color: #cccccc;
 }

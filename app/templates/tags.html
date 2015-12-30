@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block page_title %}Tags{% endblock %}
+
+{% block additional_stylesheets %}
+<link rel="stylesheet" href="/static/css/jqcloud.min.css">
+{% endblock %}
+
+{% block page_content %}
+  <section>
+    <article>
+      <div id="cloud">
+      </div>
+    </article>
+  </section>
+{% endblock %}
+
+{% block additional_scripts %}
+<script src="/static/js/jqcloud.min.js"></script>
+<script>
+var words = [
+{% for item in tags %}
+{text: "#{{ item["tag"] }}", weight: {{ item["count"] }}, link: "/tags/{{ item["tag"] }}"},
+{% endfor %}
+{text: "", weight: 0, link:"#"}
+]; 
+$("#cloud").jQCloud(words);
+</script>
+{% endblock %}
+

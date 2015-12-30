@@ -6,7 +6,7 @@
   <section>
     {% for post in posts %}
       <article>
-        <h1 class="heading"><a href="{{ post.path }}" class="post_title">{{ post.title }}</a></h1>
+        <h1 class="heading"><a href="/{{ post.path }}" class="post_title">{{ post.title }}</a></h1>
         <small class="heading">
           {{ post.date }}
           <ul class="tags">
@@ -21,13 +21,13 @@
   </section>
   <section>
     <center>
-      {% if older_pages %}
-      <a class="page_button" href="/pages/{{ page_num - 1 }}">Older</a>&nbsp;
+      {% if newer_pages %}
+      <a class="page_button" href="/pages/{{ page_num + 1 }}">Older</a>
       {% else %}
       <a class="dead_button">Older</a>
       {% endif %}
-      {% if newer_pages %}
-      <a class="page_button" href="/pages/{{ page_num + 1 }}">Newer</a>
+      {% if older_pages %}
+      <a class="page_button" href="/pages/{{ page_num - 1 }}">Newer</a>&nbsp;
       {% else %}
       <a class="dead_button">Newer</a>
       {% endif %}

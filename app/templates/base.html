@@ -3,18 +3,20 @@
   <head>
     <title>{% block page_title %}{% endblock %}</title>
     <link rel="stylesheet" href="/static/css/layout.css">
+    <link rel="stylesheet" href="/static/css/font-awesome-4.5.0/css/font-awesome.min.css">
+    {% block additional_stylesheets %}{% endblock %}
   </head>
   <body>
     <div class="container">
       <div class="header">
         <div class="header_left">
-          <h1 class="name">Kyle R. Johnston</h1>
+          <h1 class="name"><a href="/" class="nav">Kyle R. Johnston</a></h1>
         </div>
         <div class="header_right">
           <ul class="nav">
-            <li class="nav"><a href="/" class="nav">Blog</a></li>
-            <li class="nav"><a href="/about" class="nav">About</a></li>
-            <li class="nav"><a href="/projects" class="nav">Projects</a></li>
+            <li class="nav"><a href="/" class="nav" id="nav">Blog</a></li>
+            <li class="nav"><a href="/about" class="nav" id="nav">About</a></li>
+            <li class="nav"><a href="/projects" class="nav" id="nav">Projects</a></li>
           </ul>
         </div>
       </div>
@@ -29,5 +31,6 @@
     </div>
     <script src="/static/js/jquery-2.1.4.js"></script>
     <script src="/static/js/dostuff.js"></script>
+    {% block additional_scripts %}{% endblock %}
   </body>
 </html>
