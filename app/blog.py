@@ -10,6 +10,8 @@ class Blog():
                         reverse = True)
         self.pages = self.get_pages()
         self.tags = self.gen_tags()
+        for post in self.posts:
+            post.slug = post.path.split('/')[1]
 
     def get_pages(self):
         pages = []

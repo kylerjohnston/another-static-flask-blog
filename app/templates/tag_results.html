@@ -5,16 +5,19 @@
 {% block page_content %}
   <section>
     <article>
-      <h1 class="heading">#{{ tag }}</h1>
+      <h2>Posts tagged #{{ tag }}</h2>
       <p>
-        <ul>
-          {% for post in posts %}
-          <li>
-            <a href="/{{ post.path }}" class="tag_list">{{ post.title }}</a>
-            <small class="tag_date">{{ post.date }}</small></li>
-          {% endfor %}
-        </ul>
+      <ul>
+        {% for post in posts %}
+        <li>
+          <a href="{{ url_for('main.post', post_name=post.slug) }}" class="tag_list">{{ post.title }}</a>
+          <small class="tag_date">{{ post.date }}</small></li>
+        {% endfor %}
+      </ul>
       </p>
+    </article>
+    <article>
+      <p>Looking for something else? You can <a href="{{ url_for('main.view_tags') }}">browse all tags</a>.</p>
     </article>
   </section>
 {% endblock %}

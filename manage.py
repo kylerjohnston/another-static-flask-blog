@@ -9,6 +9,8 @@ manager = Manager(app)
 
 @manager.command
 def build():
+    app.debug = False
+    app.testing = True
     freezer.freeze()
 
 if __name__ == '__main__':

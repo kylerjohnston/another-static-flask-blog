@@ -3,24 +3,35 @@
 {% block page_title %}Tags{% endblock %}
 
 {% block additional_stylesheets %}
-<link rel="stylesheet" href="/static/css/jqcloud.min.css">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/jqcloud.min.css') }}">
 {% endblock %}
 
 {% block page_content %}
   <section>
-    <article>
-      <div id="cloud">
-      </div>
-    </article>
+    <div id="cloud">
+    </div>
   </section>
+  <section>
+    <table>
+      {% for row in two_col_tags %}
+        <tr class="invisible">
+          <td align="center"><a href="{{ url_for('main.view_tag', tag=row["one"]) }}">#{{ row["one"] }}</a></td>
+          {% if row["two"] != "" %}
+          <td align="center"><a href="{{ url_for('main.view_tag', tag=row["two"]) }}">#{{ row["two"] }}</a></td>
+          {% else %}
+          <td></td>
+          {% endif %}
+        </tr>
+      {% endfor %}
+    </table>
 {% endblock %}
 
 {% block additional_scripts %}
-<script src="/static/js/jqcloud.min.js"></script>
+<script src="{{ url_for('static', filename='js/jqcloud.min.js') }}"></script>
 <script>
 var words = [
 {% for item in tags %}
-{text: "#{{ item["tag"] }}", weight: {{ item["count"] }}, link: "/tags/{{ item["tag"] }}"},
+{text: "#{{ item["tag"] }}", weight: {{ item["count"] }}, link: "{{ url_for('main.view_tag', tag=item["tag"]) }}"},
 {% endfor %}
 {text: "", weight: 0, link:"#"}
 ]; 

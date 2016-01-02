@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>What Balladmonger is, and how it works</title>
+    <link rel="stylesheet" href="../../static/css/layout.css">
+    <link rel="stylesheet" href="../../pygments.css">
+    <link rel="stylesheet" href="../../static/css/font-awesome-4.5.0/css/font-awesome.min.css">
+    
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="header_left">
+          <h1 class="name"><a href="../../index.html" class="nav">Kyle R. Johnston</a></h1>
+        </div>
+        <div class="header_right">
+          <ul class="nav">
+            <li class="nav"><a href="../../index.html" class="nav" id="nav">Blog</a></li>
+            <li class="nav"><a href="../../about/index.html" class="nav" id="nav">About</a></li>
+            <li class="nav"><a href="../../projects/index.html" class="nav" id="nav">Projects</a></li>
+          </ul>
+        </div>
+      </div>
+      <aside class="hidden">
+        <p>Tag navigation will go here</p>
+      </aside>
+      
+  <section>
+    <article>
+      <h1 class="heading">What Balladmonger is, and how it works</h1>
+      <small class="heading">
+        24 November 2015
+        <ul class="tags">
+          
+            <li class="tags"><a class="tags" href="../../tags/shakespeare/index.html">#shakespeare</a></li>
+          
+            <li class="tags"><a class="tags" href="../../tags/king-lear/index.html">#king-lear</a></li>
+          
+            <li class="tags"><a class="tags" href="../../tags/markov-chains/index.html">#markov-chains</a></li>
+          
+            <li class="tags"><a class="tags" href="../../tags/python/index.html">#python</a></li>
+          
+            <li class="tags"><a class="tags" href="../../tags/flask/index.html">#flask</a></li>
+          
+        </ul>
+      </small>
+      <h2>About Balladmonger</h2>
+<p>I wrote <a href="http://github.com/kylerjohnston/balladmonger">Balladmonger</a> as a project for a graduate seminar on the interactions between Shakespearian texts and early modern ballads. Its purpose was to "remediate" <em>King Lear</em> into a ballad (well, multiple ballads) and a digital media object, interrogating in the process our ideas of what a work of literature is (can we call what Balladmonger produces remediations of <em>King Lear</em>?) and destabilizing (I hope) ideas of "authority" and "authorship." You can see the implementation of Balladmonger trained on <em>King Lear</em> at <a href="http://balladmonger.kylerjohnston.com">balladmonger.kylerjohnston.com</a>.</p>
+<p><img alt="Balladmonger" src="/static/img/balladmonger-screenshot.png" /></p>
+<p>Of course, outside the context of my seminar Balladmonger is just a program that generates poems based on some texts you feed it. It could be trained on any text file.</p>
+<h2>How it works</h2>
+<p>Balladmonger consists of two Python packages: <code>printingpress</code>, which cleans up the source texts and then trains a Markov chain model on them, and <code>balladmongerer</code>, which generates a poem based on the model trained by <code>printingpress</code> and formats it in HTML and CSS. The initial design of Balladmonger was heavily influenced by <a href="http://www.statsblogs.com/2014/02/20/how-to-fake-a-sophisticated-knowledge-of-wine-with-markov-chains/">this post on StatsBlog</a> by Tony Fischetti. </p>
+<p><code>printingpress</code> makes its model by extracting all possible three-word combinations---trigrams---from the training texts and sticking them into a Python dictionary where the first two words act as a key and the third word as a value. Each key can have multiple values: every instance of a word following a particular two-word key in the training corpus is recorded as a value. So if we were training it on Taylor Swift:</p>
+<blockquote>
+<p>'Cause the players gonna play, play, play, play, play</p>
+<p>And the haters gonna hate, hate, hate, hate, hate</p>
+</blockquote>
+<p>we'd get a dictionary that would look something like:</p>
+<div class="codehilite"><pre><span class="n">ngram_dict</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="p">(</span><span class="s">&#39;cause&#39;</span><span class="p">,</span> <span class="s">&#39;the&#39;</span><span class="p">):</span> <span class="p">[</span><span class="s">&#39;players&#39;</span><span class="p">],</span>
+    <span class="p">(</span><span class="s">&#39;the&#39;</span><span class="p">,</span> <span class="s">&#39;players&#39;</span><span class="p">):</span> <span class="p">[</span><span class="s">&#39;gonna&#39;</span><span class="p">],</span>
+    <span class="p">(</span><span class="s">&#39;players&#39;</span><span class="p">,</span> <span class="s">&#39;gonna&#39;</span><span class="p">):</span> <span class="p">[</span><span class="s">&#39;play&#39;</span><span class="p">],</span>
+    <span class="p">(</span><span class="s">&#39;gonna&#39;</span><span class="p">,</span> <span class="s">&#39;play&#39;</span><span class="p">):</span> <span class="p">[</span><span class="s">&#39;play&#39;</span><span class="p">],</span>
+    <span class="p">(</span><span class="s">&#39;play&#39;</span><span class="p">,</span> <span class="s">&#39;play&#39;</span><span class="p">):</span> <span class="p">[</span><span class="s">&#39;play&#39;</span><span class="p">,</span> <span class="s">&#39;play&#39;</span><span class="p">,</span> <span class="s">&#39;play&#39;</span><span class="p">,</span> <span class="s">&#39;and&#39;</span><span class="p">],</span>
+    <span class="p">(</span><span class="s">&#39;play&#39;</span><span class="p">,</span> <span class="s">&#39;and&#39;</span><span class="p">):</span> <span class="p">[</span><span class="s">&#39;the&#39;</span><span class="p">],</span>
+    <span class="p">(</span><span class="s">&#39;and&#39;</span><span class="p">,</span> <span class="s">&#39;the&#39;</span><span class="p">):</span> <span class="p">[</span><span class="s">&#39;haters&#39;</span><span class="p">],</span>
+    <span class="p">(</span><span class="s">&#39;the&#39;</span><span class="p">,</span> <span class="s">&#39;haters&#39;</span><span class="p">):</span> <span class="p">[</span><span class="s">&#39;gonna&#39;</span><span class="p">],</span>
+    <span class="p">(</span><span class="s">&#39;haters&#39;</span><span class="p">,</span> <span class="s">&#39;gonna&#39;</span><span class="p">):</span> <span class="p">[</span><span class="s">&#39;hate&#39;</span><span class="p">],</span>
+    <span class="p">(</span><span class="s">&#39;gonna&#39;</span><span class="p">,</span> <span class="s">&#39;hate&#39;</span><span class="p">):</span> <span class="p">[</span><span class="s">&#39;hate&#39;</span><span class="p">],</span>
+    <span class="p">(</span><span class="s">&#39;hate&#39;</span><span class="p">,</span> <span class="s">&#39;hate&#39;</span><span class="p">):</span> <span class="p">[</span><span class="s">&#39;hate&#39;</span><span class="p">,</span> <span class="s">&#39;hate&#39;</span><span class="p">,</span> <span class="s">&#39;hate&#39;</span><span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>There's no need to calculate probabilities of, e.g., the frequency of "and" occuring after the bigram "play play" since every instance of a word following "play play" is recorded in the list. So to generate a poem, all we have to do is randomly select a key and then randomly select one item from its list of values. If we randomly select "gonna play", "play" is our only possible next value. Balladmonger then uses the last two words as a new key to select a new value. So "play play" would be our new key, and now we have a list of four possible values to randomly select from, three of which are "play" and one of which is "and".</p>
+<p><code>printingpress</code> does a little preprocessing on the texts, removing chapter headings and the like, and uses the <a href="http://www.nltk.org">Natural Language Toolkit</a> library to try to infer where sentences end and begin before the model is generated, but essentially this is the way Balladmonger works. It's pretty simple! Of course, the poems it generates <em>are</em> pretty simple: more reminiscent of @horse_ebooks than Shakespeare. But that's what I'm going for here: any meaning you take from one of Balladmonger's poems you're going to have to make yourself. And that's not a bad thing. </p>
+<p>You can <a href="http://github.com/kylerjohnston/balladmonger">check out the project on Github</a> to train it on your own texts and try it out for yourself.</p>
+<p>I will have more on the literary implications of Balladmonger later.</p>
+    </article>
+  </section>
+
+      <footer>
+        <p class="footer">Built with Python and Flask. <a href="http://github.com/kylerjohnston/kylerjohnston.github.io">View the source code on Github</a>.</p>
+        <p class="footer">All content copyright <i class="fa fa-creative-commons"></i> 2015 Kyle Johnston and licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</p>
+      </footer>
+    </div>
+    <script src="../../static/js/jquery-2.1.4.js"></script>
+    <script src="../../static/js/dostuff.js"></script>
+    
+  </body>
+</html>

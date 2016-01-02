@@ -6,15 +6,16 @@
   <section>
     {% for post in posts %}
       <article>
-        <h1 class="heading"><a href="/{{ post.path }}" class="post_title">{{ post.title }}</a></h1>
+        <h1 class="heading"><a href="{{ url_for('main.post', post_name=post.slug) }}" class="post_title">{{ post.title }}</a></h1>
         <small class="heading">
           {{ post.date }}
           <ul class="tags">
             {% for tag in post.tags %}
-              <li class="tags"><a class="tags" href="/tags/{{ tag }}">#{{ tag }}</a></li>
+            <li class="tags"><a class="tags" href="{{ url_for('main.view_tag', tag=tag) }}">#{{ tag }}</a></li>
             {% endfor %}
           </ul>
         </small>
+        <small class="heading"><i class="fa fa-comment"></i> <a href="{{ url_for('main.post', post_name=post.slug) }}#disqus_thread" class="comment" data-disqus-identifier="{{ post.slug }}">Comments</a></small>
         {{ post }}
       </article>
     {% endfor %}
@@ -22,15 +23,19 @@
   <section>
     <center>
       {% if newer_pages %}
-      <a class="page_button" href="/pages/{{ page_num + 1 }}">Older</a>
+      <a class="page_button" href="{{ url_for('main.pages', num=page_num + 1) }}">Older</a>
       {% else %}
       <a class="dead_button">Older</a>
       {% endif %}
       {% if older_pages %}
-      <a class="page_button" href="/pages/{{ page_num - 1 }}">Newer</a>&nbsp;
+      <a class="page_button" href="{{ url_for('main.pages', num=page_num - 1) }}">Newer</a>&nbsp;
       {% else %}
       <a class="dead_button">Newer</a>
       {% endif %}
     </center>
   </section>
+{% endblock %}
+
+{% block additional_scripts %}
+<script id="dsq-count-scr" src="//kylerjohnston.disqus.com/count.js" async></script>
 {% endblock %}

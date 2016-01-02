@@ -2,21 +2,22 @@
 <html lang="en">
   <head>
     <title>{% block page_title %}{% endblock %}</title>
-    <link rel="stylesheet" href="/static/css/layout.css">
-    <link rel="stylesheet" href="/static/css/font-awesome-4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/layout.css') }}">
+    <link rel="stylesheet" href="{{ url_for('main.pygments_css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/font-awesome-4.5.0/css/font-awesome.min.css') }}">
     {% block additional_stylesheets %}{% endblock %}
   </head>
   <body>
     <div class="container">
       <div class="header">
         <div class="header_left">
-          <h1 class="name"><a href="/" class="nav">Kyle R. Johnston</a></h1>
+          <h1 class="name"><a href="{{ url_for('main.blog') }}" class="name_nav">Kyle R. Johnston</a></h1>
         </div>
         <div class="header_right">
           <ul class="nav">
-            <li class="nav"><a href="/" class="nav" id="nav">Blog</a></li>
-            <li class="nav"><a href="/about" class="nav" id="nav">About</a></li>
-            <li class="nav"><a href="/projects" class="nav" id="nav">Projects</a></li>
+            <li class="nav"><a href="{{ url_for('main.blog') }}" class="nav" id="nav">Blog</a></li>
+            <li class="nav"><a href="{{ url_for('main.about') }}" class="nav" id="nav">About</a></li>
+            <li class="nav"><a href="{{ url_for('main.projects') }}" class="nav" id="nav">Projects</a></li>
           </ul>
         </div>
       </div>
@@ -25,12 +26,12 @@
       </aside>
       {% block page_content %}{% endblock %}
       <footer>
-        <p class="footer">Built with Python and Flask.</p>
-        <p class="footer">All content copyright 2015 Kyle Johnston and licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</p>
+        <p class="footer">Built with Python and Flask. <a href="http://github.com/kylerjohnston/kylerjohnston.github.io">View the source code on Github</a>.</p>
+        <p class="footer">All content copyright <i class="fa fa-creative-commons"></i> 2015 Kyle Johnston and licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</p>
       </footer>
     </div>
-    <script src="/static/js/jquery-2.1.4.js"></script>
-    <script src="/static/js/dostuff.js"></script>
+    <script src="{{ url_for('static', filename='js/jquery-2.1.4.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/dostuff.js') }}"></script>
     {% block additional_scripts %}{% endblock %}
   </body>
 </html>
