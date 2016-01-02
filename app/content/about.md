@@ -9,4 +9,6 @@ More broadly, I’m interested in the ways we as humanists can use digital tools
 Contact
 -------
 
-You can find me on [Github](http://github.com/kylerjohnston) or email me at kyle r johnston at gmail.
+<i class="fa fa-github"></i> [kylerjohnston](http://github.com/kylerjohnston)<br />
+<i class="fa fa-envelope"></i> kylerjohnston at gmail
+

@@ -21,6 +21,9 @@ class Config:
     FREEZER_RELATIVE_URLS = True
     FLATPAGES_HTML_RENDERER = prerender_jinja
     FLATPAGES_MARKDOWN_EXTENSIONS = ['codehilite(linenos=False)']
+    FREEZER_DESTINATION_IGNORE = ['.gitignore',
+                                  '.git/',
+                                  'CNAME']
     
     @staticmethod
     def init_app(app):
