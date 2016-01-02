@@ -20,8 +20,8 @@ class Config:
     POST_DIR = 'posts'
     FREEZER_RELATIVE_URLS = True
     FLATPAGES_HTML_RENDERER = prerender_jinja
-    FLATPAGES_MARKDOWN_EXTENSIONS = ['codehilite(linenos=False)',
-                                     'smartypants']
+    FLATPAGES_MARKDOWN_EXTENSIONS = ['codehilite(linenos=False)']
+    
     @staticmethod
     def init_app(app):
         pass
