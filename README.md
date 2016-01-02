@@ -1,9 +1,9 @@
-Static Flask Blog
-=================
+Another Static Flask Blog
+=========================
 
 This is the code I use to generate my blog, [kylerjohnston.com](http://kylerjohnston.com). It uses [Frozen-Flask](http://pythonhosted.org/Frozen-Flask/) to generate static files from a Flask app. Its design was inspired by a couple blog posts ([this one from nicolas.perriault.net](https://nicolas.perriault.net/code/2012/dead-easy-yet-powerful-static-website-generator-with-flask/), [this one by James Harding](http://www.jamesharding.ca/posts/simple-static-markdown-blog-in-flask/), and [this one by Charles Leifer](http://charlesleifer.com/blog/how-to-make-a-flask-blog-in-one-hour-or-less/)) and Miguel Grinberg’s excellent book [*Flask Web Development*](http://flaskbook.com), and my own experience with other static blog generators (Jekyll). 
 
-**This is not intended for use as a template**. The configurations, templates, and probably other things I’m forgetting at the moment are specific to my own needs. I’m publishing this mostly as another example (in addition to the aforementioned blog posts) of a static blog written in Flask. Use it for ideas if you want; copy it if you want! But you’ll have to dig around in the configurations and templates a bit to set things up for your particular needs. You’ll probably wanna clean out the `app/content/` directory, at the very least...
+**This is not intended for use as a template**. The configurations, Jinja templates, and probably other things I’m forgetting at the moment are specific to my own needs. I’m publishing this mostly as another example (in addition to the aforementioned blog posts) of a static blog written in Flask. Use it for ideas. Copy it if you want! But you’ll have to dig around in the configurations and templates a bit to set things up for your particular needs. You’ll probably wanna clean out the `app/content/` directory, at the very least...
 
 How it works
 ------------
