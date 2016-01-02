@@ -18,9 +18,9 @@ Blog posts are written in markdown with a YAML header and stored in the `app/con
     
     Your post starts here.
 
-I also have an about page and a projects page under `app/content/`. These are “static” pages, ignored by the blog.
+I also have an about page and a projects page under `app/content/`. These are “static” pages, ignored by the blog post aggregator. They have their own routes. The views file for the main blueprint is in `app/main/views.py`.
 
-The `app/content/drafts/` folder does nothing. It’s just a place to store posts I’m working on; the blog ignores them.
+The `app/content/drafts/` folder does nothing. It’s just a place to store posts I’m working on; the app ignores them.
 
 The blog organizes posts in reverse order (e.g. newest first), five posts per page.
 

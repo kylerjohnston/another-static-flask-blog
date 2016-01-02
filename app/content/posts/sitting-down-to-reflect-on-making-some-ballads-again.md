@@ -1,12 +1,9 @@
-title: Sitting Down to Reflect on Making Some Ballads Again
+title: On Sitting Down to Reflect on Making Some Ballads Again
 date: 01 January 2015
 tags:
 - shakespeare
 - early-modern-literature
 - ballads
-- markov-chains
-- python
-- flask
 
 Last semester I took a seminar on the materiality of early modern English books. I’m a Victorianist, but I was drawn to the course by the promise of spending lots of time in the Rare Book and Manuscript library.
 
