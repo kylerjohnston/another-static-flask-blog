@@ -1,7 +1,6 @@
 venv/
 __pycache__/
 app/build/*
-app/content/*
 *.pyc
 *.swp
 
