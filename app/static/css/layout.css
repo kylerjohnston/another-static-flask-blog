@@ -21,25 +21,40 @@
   top: 0px;
   max-width: 700px;
   margin: 0 auto;
-  height: 150px;
   border-bottom: 2px solid #333;
   padding: 0;
 }
 
 .header_right {
-  position: absolute;
-  display: inline;
-  right: 0px;
-  bottom: 0.25em;
+  position: relative;
+  display: block;
   border: 0px;
 }
 
 .header_left {
-  position: absolute;
-  display: inline;
-  left: 0px;
-  bottom: 0.25em;
+  position: relative;
+  display: block;
+  margin: 0px 0px -.5em -5px;
   border: 0;
+}
+
+@media only screen and (min-width: 800px) {
+  .header {
+    height: 150px;
+  }
+  .header_right,.header_left {
+    display: inline;
+    position: absolute;
+  }
+  .header_right {
+    right: 0px;
+    bottom: 0.25em;
+  }
+  .header_left {
+    left: 0px;
+    margin: 0px 0px 0px 0px;
+    bottom: 0.25em;
+  }
 }
 
 .container {
