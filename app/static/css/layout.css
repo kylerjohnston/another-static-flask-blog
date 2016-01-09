@@ -2,6 +2,10 @@
   font-family: SourceCodePro;
   src: url(https://fonts.googleapis.com/css?family=Source+Code+Pro:300);
 }
+@font-face {
+  font-family: Roboto;
+  src: url(https://fonts.googleapis.com/css?family=Roboto:300,400);
+}
 
 /***************************** Layout ****************************************/
 
@@ -67,7 +71,7 @@
 section {
   max-width: 700px;
   margin: 0 auto;
-  padding: 20px 10px 0px 10px;
+  padding: 5px 10px 0px 10px;
 }
 
 aside {
@@ -107,8 +111,8 @@ li.nav {
 
 a.nav,a.name_nav {
   color: #333;
-  font-family: Helvetica, sans-serif;
-  font-weight: 400;
+  font-family: Roboto, sans-serif;
+  font-weight: 300;
   text-transform: uppercase;
   font-size: 0.9em;
   text-decoration: none;
@@ -141,17 +145,17 @@ article {
 /********************************** Typography *******************************/
 
 h1,h2,h3 {
-  font-family: Garamond, Georgia, serif;
+  font-family: Roboto;
   line-height: 1;
   font-weight: 400;
   color: #333;
   padding: 0px;
-  margin: 10px 0px 5px 0px;
+  margin: 0px 0px 5px 0px;
 }
 
 h1.name {
   display: inline;
-  font-family: Helvetica;
+  font-family: Roboto;
   font-size: 1em;
   text-transform: uppercase;
   padding: 10px;
@@ -159,15 +163,15 @@ h1.name {
 
 body {
   text-align: left;
-  font-weight: 200;
+  font-weight: 300;
   line-height: 1.5;
-  font-family: Georgia, Garamond, serif;
+  font-family: Roboto;
   background-color: #fdfdfd;
   color: #333;
 }
 
 ul, li {
-  font-family: Garamond, Georgia, serif;
+  font-family: Roboto;
   padding: 3px;
 }
 
@@ -205,7 +209,7 @@ h2.heading {
 }
 
 small.heading {
-  font-family: Helvetica, sans-serif;
+  font-family: Roboto, sans-serif;
   font-size: .75em;
   font-weight: 400;
   display: block;
@@ -213,7 +217,7 @@ small.heading {
 }
 
 a.comment, a.comment:hover {
-  font-family: Helvetica, sans-serif;
+  font-family: Roboto, sans-serif;
   font-size: 1em;
   font-weight: 400;
   color: #666666;
@@ -221,7 +225,7 @@ a.comment, a.comment:hover {
 }
 
 p.footer {
-  font-family: Helvetica, sans-serif;
+  font-family: Roboto, sans-serif;
   color: #666666;
   font-size: 0.75em;
   display: block;
@@ -239,7 +243,7 @@ a:hover {
 }
 
 a.tags {
-  font-family: Helvetica;
+  font-family: Roboto, sans-serif;
   text-decoration: none;
 }
 
@@ -269,7 +273,7 @@ a.dead_button {
 }
 
 small.tag_date {
-  font-family: Helvetica;
+  font-family: Roboto, sans-serif;
   font-size: 0.75em;
   font-weight: 400;
   display: block;
@@ -278,7 +282,7 @@ small.tag_date {
 }
 
 a.tag_list {
-  font-family: Garamond;
+  font-family: Roboto, sans-serif;
   font-size: 1.25em;
   color: #1b85b8;
   text-decoration: none;
@@ -289,7 +293,7 @@ a.tag_list:hover {
 }
 
 table {
-  font-family: Helvetica;
+  font-family: Roboto, sans-serif;
   color: #333;
   width: 100%;
   margin: 0 auto;
@@ -334,7 +338,7 @@ code {
 }
 
 blockquote {
-  font-family: Helvetica, sans-serif;
+  font-family: Roboto, sans-serif;
   font-size: 0.9em;
   line-height: 0.5;
   color: #666;
