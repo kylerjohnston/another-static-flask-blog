@@ -166,7 +166,7 @@ body {
   font-weight: 300;
   line-height: 1.5;
   font-family: Roboto;
-  background-color: #fdfdfd;
+  background-color: #faf8f8;
   color: #333;
 }
 
@@ -303,7 +303,7 @@ table {
 
 th {
   background-color: #5a5255;
-  color: #fdfdfd;
+  color: #faf8f8;
   font-weight: 400;
   text-align: center;
   padding: 10px;
@@ -318,7 +318,7 @@ tr:nth-child(even) {
 }
 
 tr.invisible {
-  background-color: #fdfdfd;
+  background-color: #faf8f8;
 }
 
 img {
