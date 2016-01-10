@@ -153,6 +153,10 @@ h1,h2,h3 {
   margin: 0px 0px 5px 0px;
 }
 
+article h1::first-letter {
+  color: #ae5a41;
+}
+
 h1.name {
   display: inline;
   font-family: Roboto;
@@ -362,3 +366,4 @@ pre {
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
 }
+
