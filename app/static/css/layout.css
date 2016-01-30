@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:300,700|Source+Code+Pro);
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,700|Source+Code+Pro|Bitter);
 
 /***************************** Layout ****************************************/
 
@@ -138,16 +138,14 @@ article {
 /********************************** Typography *******************************/
 
 h1,h2,h3 {
-  font-family: 'Roboto';
+  /*font-family: 'Roboto';*/
+  font-family: Bitter, serif;
+  font-weight: 400;
   line-height: 1;
-  font-weight: 700;
+  /*font-weight: 700;*/
   color: #333;
   padding: 0px;
   margin: 0px 0px 5px 0px;
-}
-
-article h1::first-letter {
-  color: #ae5a41;
 }
 
 h1.name {
