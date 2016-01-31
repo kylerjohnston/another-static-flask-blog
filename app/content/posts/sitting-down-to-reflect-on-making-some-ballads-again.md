@@ -1,4 +1,4 @@
-title: On Sitting Down to Reflect on Making Some Ballads Again
+title: On sitting down to reflect on making some ballads again
 date: 01 January 2016
 tags:
 - shakespeare
