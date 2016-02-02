@@ -73,6 +73,12 @@ def view_tags():
     return render_template('tags.html',
                            two_col_tags = two_col_tags,
                            tags = content.tags)
+
+@main.route('/archive/')
+def archive():
+    return render_template('archive.html',
+                           posts = content.posts)
+
 @main.route('/pygments.css')
 def pygments_css():
     return pygments_style_defs('friendly'), 200, {'Content-Type': 'text/css'}
