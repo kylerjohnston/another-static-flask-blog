@@ -1,3 +1,4 @@
+/* Highlight current page in nav menu */
 $(function(){
   $("a#nav").each(function(){
     if ($(this).prop("href") == window.location.href) {
@@ -5,3 +6,10 @@ $(function(){
     };
   });
 });
+
+// Mobile nav menu
+$(".menu").hide();
+$("#menu-open").click(function() {
+  $(".menu").toggle();
+});
+
