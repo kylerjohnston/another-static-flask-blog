@@ -398,3 +398,12 @@ pre {
   -moz-border-radius: 4px;
 }
 
+figcaption {
+  font-style: italic;
+  font-size: .8em;
+  text-align: center;
+}
+
+ul.tag_list {
+  list-style-type: none;
+}

@@ -13,3 +13,18 @@ $("#menu-open").click(function() {
   $(".menu").toggle();
 });
 
+// Add captions to images
+// Adapted from this stackoverflow post:
+// http://stackoverflow.com/questions/19331362/using-an-image-caption-in-markdown-jekyll
+var showCaptions = function() {
+  var caption;
+  $('img').each(function() {
+    caption = $(this).attr('alt');
+    url = $(this).attr('src');
+    if(caption != '') {
+      $(this).replaceWith('<figure><img src="' + url + '" alt="' + caption + '"><figcaption>' + caption + '</figcaption></figure>');
+    }
+  });
+}();
+
+
