@@ -311,6 +311,15 @@ a.dead_button {
   webkit-border-radius: 4px;
 }
 
+a.projects {
+  color: #666666;
+  font-size: 1.3em;
+}
+
+a.projects:hover {
+  color: #333333;
+}
+
 small.tag_date {
   font-family: 'Roboto', sans-serif;
   font-size: 0.75em;
