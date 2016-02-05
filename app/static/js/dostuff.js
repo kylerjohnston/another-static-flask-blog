@@ -16,7 +16,7 @@ $("#menu-open").click(function() {
 // Add captions to images
 // Adapted from this stackoverflow post:
 // http://stackoverflow.com/questions/19331362/using-an-image-caption-in-markdown-jekyll
-var showCaptions = function() {
+$(function() {
   var caption;
   $('img').each(function() {
     caption = $(this).attr('alt');
@@ -25,6 +25,10 @@ var showCaptions = function() {
       $(this).replaceWith('<figure><img src="' + url + '" alt="' + caption + '"><figcaption>' + caption + '</figcaption></figure>');
     }
   });
-}();
+});
 
-
+// Add current date to copyright notice
+$(function() {
+  var d = new Date();
+  $('span#current-year').replaceWith(d.getFullYear());
+});
