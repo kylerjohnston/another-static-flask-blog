@@ -2,8 +2,8 @@ title: On sitting down to reflect on making some ballads again
 date: 01 January 2016
 tags:
   - shakespeare
-  - literary studies
-  - markov chains
+  - literary-studies
+  - markov-chains
 
 Last semester I took a seminar on the materiality of early modern English books. I’m a Victorianist, but I was drawn to the course by the promise of spending lots of time in the Rare Book and Manuscript library.
 
