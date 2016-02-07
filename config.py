@@ -19,11 +19,19 @@ class Config:
     FLATPAGES_ROOT = 'content'
     POST_DIR = 'posts'
     FREEZER_RELATIVE_URLS = True
-    FLATPAGES_MARKDOWN_EXTENSIONS = ['footnotes',
-                                    'smarty',
-                                    'codehilite']
+# FLATPAGES_MARKDOWN_EXTENSIONS won't work because of the prerender_jinja hack.
+# I've edited venv/lib/python3.5/site-packages/flask_flatpages/utils.py
+# to include the needed markdown extensions instead in the pygmented_markdown
+# function. See lines 40-41 in that file. THIS IS A TERRIBLE HACK. I'm going
+# to submit an issue on Github to see if I can resolve it a better way. But
+# for the time being this will work.
+#
+#    FLATPAGES_MARKDOWN_EXTENSIONS = ['footnotes',
+#                                    'smarty',
+#                                    'codehilite']
+#
     FLATPAGES_AUTO_RELOAD = True
-#    FLATPAGES_HTML_RENDERER = prerender_jinja
+    FLATPAGES_HTML_RENDERER = prerender_jinja
     FREEZER_DESTINATION_IGNORE = ['.gitignore',
                                   '.git/',
                                   'CNAME']

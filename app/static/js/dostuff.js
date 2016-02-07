@@ -8,7 +8,7 @@ $(function(){
   $("a#nav").each(function(){
     if ($(this).prop("href") == window.location.href) {
       $(this).addClass("selected");
-    };
+    }
     else if ($(this).prop("href") == "/" && window.location.href == "/index.html") {
       $(this).addClass("selected");
     };

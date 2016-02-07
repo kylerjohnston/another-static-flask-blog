@@ -9,7 +9,7 @@ Last semester I took a seminar on the materiality of early modern English books.
 
 Our main focus in the seminar was on the ways Shakespeare’s plays and early modern ballads interact: how Shakespeare’s plays rely upon, use, and remediate ballads and how ballads rely upon, use, and remediate Shakespeare’s plays. As a class, we developed our own ballad adaptations of Shakespeare’s plays in order to explore some aspect of the materiality remediation. For my project, I wrote a web app, [Balladmonger](http://balladmonger.kylerjohnston.com), which generates ballads based on the text of *King Lear* and its remediations&mdash;texts that influenced it or that it influenced.
 
-![A screenshot of Balladmonger](/static/img/balladmonger-screenshot.png)
+![A screenshot of Balladmonger]({{ url_for('static', filename='img/balladmonger-screenshot.png') }})
 
 My initial purpose for the project was threefold. First, *Balladmonger* literally re-mediates (puts into a new medium) words and phrases lifted directly from some other work. But can we call the texts *Balladmonger* produces a “remediation” of that work? Can we call a semi-random collection of words and phrases from *King Lear* a version of *King Lear*? It’s an ontological question about what a play or a ballad or a text is. What relation does text as such, stripped of context, have to “the text” of *Lear*?
 
