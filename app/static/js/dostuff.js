@@ -1,7 +1,15 @@
+// Check for jQuery
+if(typeof jQuery === 'undefined') {
+  document.write(unescape("%3Cscript src='/static/js/jquery-2.2.0.min.js' type='text/javascript'%3E%3C/script%3E"));
+};
+
 /* Highlight current page in nav menu */
 $(function(){
   $("a#nav").each(function(){
     if ($(this).prop("href") == window.location.href) {
+      $(this).addClass("selected");
+    };
+    else if ($(this).prop("href") == "/" && window.location.href == "/index.html") {
       $(this).addClass("selected");
     };
   });
@@ -22,7 +30,7 @@ $(function() {
     caption = $(this).attr('alt');
     url = $(this).attr('src');
     if(caption != '') {
-      $(this).replaceWith('<figure><img src="' + url + '" alt="' + caption + '"><figcaption>' + caption + '</figcaption></figure>');
+      $(this).replaceWith('<figure><a href="' + url + '"><img src="' + url + '" alt="' + caption + '"></a><figcaption>' + caption + '</figcaption></figure>');
     }
   });
 });

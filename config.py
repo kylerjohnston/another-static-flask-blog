@@ -19,8 +19,11 @@ class Config:
     FLATPAGES_ROOT = 'content'
     POST_DIR = 'posts'
     FREEZER_RELATIVE_URLS = True
-    FLATPAGES_HTML_RENDERER = prerender_jinja
-    FLATPAGES_MARKDOWN_EXTENSIONS = ['codehilite(linenos=False)']
+    FLATPAGES_MARKDOWN_EXTENSIONS = ['footnotes',
+                                    'smarty',
+                                    'codehilite']
+    FLATPAGES_AUTO_RELOAD = True
+#    FLATPAGES_HTML_RENDERER = prerender_jinja
     FREEZER_DESTINATION_IGNORE = ['.gitignore',
                                   '.git/',
                                   'CNAME']

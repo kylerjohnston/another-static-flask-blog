@@ -175,7 +175,7 @@ a.selected:hover {
 }
 
 article {
-  padding: 10px 0px 100px 0px;
+  padding: 10px 0px 50px 0px;
 }
 
 /********************************** Typography *******************************/
@@ -184,11 +184,11 @@ h1,h2,h3 {
   /*font-family: 'Roboto';*/
   font-family: Bitter, serif;
   font-weight: 400;
-  line-height: 1;
+  line-height: 1.2;
   /*font-weight: 700;*/
   color: #333;
-  padding: 0px;
-  margin: 0px 0px 5px 0px;
+  padding: 1em 0 0 0;
+  margin: 0px;
 }
 
 h1.name {
@@ -315,12 +315,12 @@ a.dead_button {
 }
 
 a.projects {
-  color: #666666;
+  color: #333333;
   font-size: 1.3em;
 }
 
 a.projects:hover {
-  color: #333333;
+  color: #666666;
 }
 
 small.tag_date {
@@ -425,4 +425,13 @@ button#menu-open {
   border: 1px solid #333333;
   border-radius: 4px;
   padding: 1em;
+}
+
+.footnote {
+  font-size: .9em;
+}
+
+.footnote ol {
+  margin: 0;
+  padding: 0;
 }
