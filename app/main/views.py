@@ -1,9 +1,11 @@
-from flask import render_template
+from flask import render_template, request
 from flask_flatpages import pygments_style_defs
 from . import main
 from .. import flatpages
 from ..blog import Blog
 from manage import app
+from werkzeug.contrib.atom import AtomFeed
+import datetime
 
 content = Blog(flatpages, app.config['POST_DIR'])
 
@@ -82,3 +84,17 @@ def archive():
 @main.route('/pygments.css')
 def pygments_css():
     return pygments_style_defs('friendly'), 200, {'Content-Type': 'text/css'}
+
+@main.route('/recent.atom')
+def atom_feed():
+    feed = AtomFeed('Recent Posts',
+                    feed_url=request.url, url=request.url_root)
+    for post in content.posts:
+        postdate = datetime.datetime.strptime(post['date'], '%d %B %Y')
+        feed.add(post['title'], post.html,
+                 content_type='html',
+                 author='Kyle Johnston',
+                 url='http://kylerjohnston.com/posts/{}/'.format(post.slug),
+                 updated=postdate,
+                 published=postdate)
+    return feed.get_response()

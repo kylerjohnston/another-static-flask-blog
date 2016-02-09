@@ -6,14 +6,9 @@ if(typeof jQuery === 'undefined') {
 /* Highlight current page in nav menu */
 $(function(){
   $("a#nav").each(function(){
-    console.log('this.href: ' + $(this).prop("href"));
-    console.log('window.location.href: ' + window.location.href);
-    if ($(this).prop("href") == window.location.href) {
+    if ($(this).prop("href") == window.location.href || $(this).prop("href") == window.location.href + 'index.html') {
       $(this).addClass("selected");
     }
-    else if ($(this).prop("href") == "/" && window.location.href == "/index.html") {
-      $(this).addClass("selected");
-    };
   });
 });
 

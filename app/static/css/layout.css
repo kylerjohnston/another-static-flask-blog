@@ -74,6 +74,16 @@ a.nav,a.name_nav {
   text-decoration: none;
 }
 
+a.atom {
+  font-size: 1em;
+  text-decoration: none;
+  color: #ae5a41;
+}
+
+a.atom:hover {
+  color: #683627;
+}
+
 @media only screen and (min-width: 800px) {
   .header {
     height: 150px;
@@ -110,7 +120,7 @@ a.nav,a.name_nav {
 
 @media only screen and (max-width: 600px) {
   img {
-    max-width: 300px;
+    max-width: 260px;
   }
 }
 
@@ -277,11 +287,12 @@ p.footer {
 
 a {
   color: #1b85b8;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 a:hover {
   color: #125d80;
+  text-decoration: underline;
 }
 
 a.tags {
@@ -326,7 +337,7 @@ a.projects:hover {
 small.tag_date {
   font-family: 'Roboto', sans-serif;
   font-size: 0.75em;
-  font-weight: 400;
+  font-weight: 300;
   display: block;
   font-style: italic;
   color: #666666;
