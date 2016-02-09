@@ -1,8 +1,8 @@
 title: "What makes a bestseller? Modeling literary prestige in the 19th and 20th centuries"
-date: 05 February 2016
+date: 08 February 2016
 tags:
   - text-mining
-  - literary studies
+  - literary-studies
 
 For the last semester, I’ve been working as a research assistant for [Ted Underwood](http://tedunderwood.com) on a project aiming to model one form of literary prestige.[^novel] This is part of a larger project Ted has been working on along with another research assistant, Jordan Sellers. In a [blog post from May last year](http://tedunderwood.com/2015/05/18/how-quickly-do-literary-standards-change/) (and a forthcoming article in *MLQ*), Ted and Jordan ran a model on two samples of 19th-century poetry---one a sample of works which had been reviewed in prominent literary magazines, and one a sample of works randomly selected from the [HathiTrust Digital Library](http://hathitrust.org)---to see if the prestige of the reviewed volumes would be evident in the texts of the works themselves (spoiler: it is).
 
@@ -14,7 +14,7 @@ We sampled bestsellers from two databases of texts: the HathiTrust Digital Libra
 
 Modeling this sample we get the following plot:
 
-![Figure 1. HathiTrust and Chicago Text Lab samples, 1800&ndash;1990]({{ url_for('static', filename= 'img/model-2-1.png') }})
+![Figure 1. HathiTrust and Chicago Text Lab samples, 1800&ndash;1990](http://kylerjohnston.com/static/img/model-2-1.png)
 
 In the plot above, the y-axis represents the probability that a work is a bestseller. Actual bestsellers are plotted in red dots; randomly sampled works are grey +s.
 
@@ -24,15 +24,15 @@ We have to interpret this plot cautiously, though. There are some important diff
 
 To test this interpretation, I modeled the Chicago Text Lab texts on their own:
 
-![Figure 2. Chicago Text Lab sample, 1898&ndash;1990]({{ url_for('static', filename='img/chicago_only_whole_20thc.png') }})
+![Figure 2. Chicago Text Lab sample, 1898&ndash;1990](http://kylerjohnston.com/static/img/chicago_only_whole_20thc.png)
 
 When we model only works drawn from the Chicago Text Lab, we see a *reverse trend* from what we saw in our whole model. Over the course of the twentieth century, works tend to contain *fewer* of the features that would mark them as bestsellers. This is weird stuff! It suggests a definite stylistic shift over the course of the twentieth century; what's popular in 1990 would not have been as popular in 1900.
 
-![Figure 3. Chicago Text Lab sample, 1898&ndash;1949]({{ url_for('static', filename='img/chicago1900-1949.png') }})
+![Figure 3. Chicago Text Lab sample, 1898&ndash;1949](http://kylerjohnston.com/static/img/chicago1900-1949.png)
 
 If we break our model down into smaller, half-century segments, we can still see the downward trend continuing over the first half of the twentieth century. (Also interestingly, the model seems to be better at predicting bestsellerliness after about 1920.)
 
-![Figure 4. Chicago Text Lab sample, 1950&ndash;1990]({{ url_for('static', filename='img/chicago1950-1990.png') }})
+![Figure 4. Chicago Text Lab sample, 1950&ndash;1990](http://kylerjohnston.com/static/img/chicago1950-1990.png)
 
 The trend flattens out over the latter half of the twentieth century, however. Whatever stylistic shifts were happening in the twentieth century, by 1950 they were mostly complete and things had mostly stabilized again. 
 
