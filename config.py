@@ -28,6 +28,7 @@ class Config:
                                   '.git/',
                                   'CNAME']
     FREEZER_BASE_URL = 'http://kylerjohnston.com/'
+    FREEZER_IGNORE_404_NOT_FOUND = True # To generate /404.html
 
     @staticmethod
     def init_app(app):

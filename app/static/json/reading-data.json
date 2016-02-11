@@ -1,0 +1,27 @@
+[
+  {
+      "title":   "The Tell-Tale Heart",
+      "author": "Edgar Allen Poe",
+      "date": "2016-02-01",
+      "pages": 5,
+      "response": 2,
+      "genre": "short fiction"
+  },
+  {
+      "title": "The Mysterious Death on the Underground Railway",
+      "author": "Baroness Orczy",
+      "date": "2016-02-11",
+      "pages": 19,
+      "response": 2,
+      "genre": "short fiction"
+  },
+  {
+    "title": "Clues",
+    "author": "Franco Moretti",
+    "date": "2016-02-11",
+    "pages": 15,
+    "response": 2,
+    "genre": "literary criticism"
+  }
+]
+

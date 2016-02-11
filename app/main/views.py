@@ -1,13 +1,17 @@
 from flask import render_template, request
 from flask_flatpages import pygments_style_defs
 from . import main
-from .. import flatpages
+from .. import flatpages, freezer
 from ..blog import Blog
 from manage import app
 from werkzeug.contrib.atom import AtomFeed
 import datetime
 
 content = Blog(flatpages, app.config['POST_DIR'])
+
+@freezer.register_generator
+def error_handlers():
+    yield '/404.html'
 
 def page_test(page_num):
     if len(content.pages) > page_num:
