@@ -7,7 +7,7 @@ from manage import app
 from werkzeug.contrib.atom import AtomFeed
 import datetime
 
-content = Blog(flatpages, app.config['POST_DIR'])
+content = Blog(flatpages, app.config['POST_DIR'], app.config['DRAFT_DIR'])
 
 @freezer.register_generator
 def error_handlers():
@@ -32,6 +32,17 @@ def blog():
                            newer_pages = newer_pages,
                            older_pages = False,
                            page_num = 1)
+
+@main.route('/drafts/')
+def drafts():
+    if(app.config['SHOW_DRAFTS']):
+       return render_template('blog.html',
+                              posts = [post for post in content.drafts],
+                              newer_pages = False,
+                              older_pages = False,
+                              page_num = 1)
+    else:
+       return render_template('404.html')
 
 @main.route('/pages/<num>/')
 def pages(num):

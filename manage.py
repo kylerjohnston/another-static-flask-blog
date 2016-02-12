@@ -11,6 +11,8 @@ manager = Manager(app)
 def build():
     app.debug = False
     app.testing = True
+    if(app.config['SHOW_DRAFTS']):
+        print('Warning: Draft posts will be visible in this build.')
     freezer.freeze()
 
 if __name__ == '__main__':

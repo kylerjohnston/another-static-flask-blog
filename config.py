@@ -8,9 +8,7 @@ import markdown
 basedir = os.path.abspath(os.path.dirname(__file__))
 
 def prerender_jinja(text):
-    """ This function uses Jinja to prerender flatpages.
-    Courtesy of http://stackoverflow.com/questions/21576520/mix-images-with-markdown-in-a-flask-app
-    """
+    # This function prerenders Jinja code in flatpages markdown
     prerendered_body = render_template_string(Markup(text))
     return markdown.markdown(prerendered_body, Config.MARKDOWN_EXTENSIONS)
 
@@ -18,6 +16,7 @@ class Config:
     FLATPAGES_EXTENSION = '.md'
     FLATPAGES_ROOT = 'content'
     POST_DIR = 'posts'
+    DRAFT_DIR = 'drafts'
     FREEZER_RELATIVE_URLS = False
     MARKDOWN_EXTENSIONS = ['footnotes',
                            'smarty',
@@ -37,19 +36,20 @@ class Config:
 class DevelopmentConfig(Config):
     DEBUG = True
     TESTING = False
+    SHOW_DRAFTS = False
 
-class TestingConfig(Config):
-    DEBUG = False
-    TESTING = True
+class DraftingConfig(DevelopmentConfig):
+    SHOW_DRAFTS = True
 
 class ProductionConfig(Config):
     DEBUG = False
     TESTING = False
+    SHOW_DRAFTS = False
 
 config = {
-    'development': DevelopmentConfig,
-    'testing': TestingConfig,
+    'dev': DevelopmentConfig,
     'production': ProductionConfig,
+    'drafting': DraftingConfig,
 
     'default': DevelopmentConfig
 }
