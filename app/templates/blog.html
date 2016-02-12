@@ -20,17 +20,17 @@
       </article>
     {% endfor %}
   </section>
-  <section>
+  <section class="blog-nav">
     <center>
-      {% if newer_pages %}
-      <a class="page_button" href="{{ url_for('main.pages', num=page_num + 1) }}">Older</a>
-      {% else %}
-      <a class="dead_button">Older</a>
-      {% endif %}
       {% if older_pages %}
       <a class="page_button" href="{{ url_for('main.pages', num=page_num - 1) }}">Newer</a>&nbsp;
       {% else %}
       <a class="dead_button">Newer</a>
+      {% endif %}
+      {% if newer_pages %}
+      <a class="page_button" href="{{ url_for('main.pages', num=page_num + 1) }}">Older</a>
+      {% else %}
+      <a class="dead_button">Older</a>
       {% endif %}
     </center>
   </section>
