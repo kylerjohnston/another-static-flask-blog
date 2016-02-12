@@ -20,7 +20,7 @@ Blog posts are written in markdown with a YAML header and stored in the `app/con
 
 I also have a couple non-blog static pages (an about page, a projects page, etc.) under `app/content/`. These are ignored by the blog post aggregator which generates the home page. They have their own routes. I designed this with blueprints to make it more modular in case I want to expand it later. The views file for the main (and currently only) blueprint is in `app/main/views.py`.
 
-The `app/content/drafts/` folder does nothing. It’s just a place to store posts I’m working on; the app ignores them.
+If you set the `FLASK_CONFIG` environment variable to `"drafting"`, you can put drafts in the `app/content/drafts/` and they'll be visible at http://127.0.0.1:5000/drafts/ when you run the server. Make sure to set `FLASK_CONFIG` to `"production"` before building and publishing your static pages.
 
 The blog organizes posts in reverse order (e.g. newest first), five posts per page.
 
