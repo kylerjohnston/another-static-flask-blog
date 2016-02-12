@@ -32,12 +32,11 @@ To run the server:
 
 To build static pages:
 
-    $ ./manage.py build
+    $ export FLASK_CONFIG=production && ./manage.py build
 
 To Do
 -----
 
-- Add draft preview
 * Fork into blank template project?
 
 License
