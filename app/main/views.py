@@ -33,16 +33,7 @@ def blog():
                            older_pages = False,
                            page_num = 1)
 
-@main.route('/drafts/')
-def drafts():
-    if(app.config['SHOW_DRAFTS']):
-       return render_template('blog.html',
-                              posts = [post for post in content.drafts],
-                              newer_pages = False,
-                              older_pages = False,
-                              page_num = 1)
-    else:
-       return render_template('404.html')
+
 
 @main.route('/pages/<num>/')
 def pages(num):
@@ -113,3 +104,12 @@ def atom_feed():
                  updated=postdate,
                  published=postdate)
     return feed.get_response()
+
+if app.config['SHOW_DRAFTS']:
+    @main.route('/drafts/')
+    def drafts():
+        return render_template('blog.html',
+                               posts = [post for post in content.drafts],
+                               newer_pages = False,
+                               older_pages = False,
+                               page_num = 1)
