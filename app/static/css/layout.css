@@ -446,3 +446,21 @@ button#menu-open {
   margin: 0;
   padding: 0;
 }
+
+hr {
+  border-top: 1px dotted #666666;
+  border-bottom: 0px;
+  border-right: 0px;
+  border-left: 0px;
+  text-align: center;
+}
+
+hr:after {
+  content: '§';
+  display: inline-block;
+  position: relative;
+  color: #666666;
+  top: -13px;
+  padding: 0 1em 0 1em;
+  background: #fdfdfd;
+}
