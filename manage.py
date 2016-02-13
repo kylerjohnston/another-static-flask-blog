@@ -18,7 +18,12 @@ def build():
 @manager.command
 def test():
     import nose
-    nose.main()
+    import sys
+    from config import basedir
+    nose.run(
+        argv = [sys.argv[0],
+                os.path.join(basedir, 'tests')]
+    )
 
 if __name__ == '__main__':
     manager.run()
