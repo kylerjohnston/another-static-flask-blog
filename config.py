@@ -41,6 +41,11 @@ class DevelopmentConfig(Config):
 class DraftingConfig(DevelopmentConfig):
     SHOW_DRAFTS = True
 
+class TestingConfig(Config):
+    DEBUG = False
+    TESTING = True
+    SHOW_DRAFTS = False
+
 class ProductionConfig(Config):
     DEBUG = False
     TESTING = False
@@ -50,6 +55,7 @@ config = {
     'dev': DevelopmentConfig,
     'production': ProductionConfig,
     'drafting': DraftingConfig,
+    'testing': TestingConfig,
 
     'default': DevelopmentConfig
 }

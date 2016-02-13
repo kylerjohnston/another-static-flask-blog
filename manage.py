@@ -15,5 +15,10 @@ def build():
         print('Warning: Draft posts will be visible in this build.')
     freezer.freeze()
 
+@manager.command
+def test():
+    import nose
+    nose.main()
+
 if __name__ == '__main__':
     manager.run()

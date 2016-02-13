@@ -1,19 +1,21 @@
 [
   {
-      "title":   "The Tell-Tale Heart",
-      "author": "Edgar Allen Poe",
-      "date": "2016-02-01",
-      "pages": 5,
-      "response": 2,
-      "genre": "short fiction"
+    "title":   "The Tell-Tale Heart",
+    "author": "Edgar Allen Poe",
+    "date": "2016-02-01",
+    "pages": 5,
+    "response": 2,
+    "genre": "short fiction",
+    "completed": 1
   },
   {
-      "title": "The Mysterious Death on the Underground Railway",
-      "author": "Baroness Orczy",
-      "date": "2016-02-11",
-      "pages": 19,
-      "response": 2,
-      "genre": "short fiction"
+    "title": "The Mysterious Death on the Underground Railway",
+    "author": "Baroness Orczy",
+    "date": "2016-02-11",
+    "pages": 19,
+    "response": 2,
+    "genre": "short fiction",
+    "compelted": 1
   },
   {
     "title": "Clues",
@@ -21,7 +23,44 @@
     "date": "2016-02-11",
     "pages": 15,
     "response": 2,
-    "genre": "literary criticism"
+    "genre": "literary criticism",
+    "completed": 1
+  },
+  {
+    "title": "The Murders in the Rue Morgue",
+    "author": "Edgar Allen Poe",
+    "date": "2016-02-12",
+    "pages": 26,
+    "response": 2,
+    "genre": "short fiction",
+    "completed": 1
+  },
+  {
+    "title": "The Mystery of Marie Roget",
+    "author": "Edgar Allen Poe",
+    "date": "2016-02-12",
+    "pages": 9,
+    "response": 2,
+    "genre": "short fiction",
+    "completed": 0
+  },
+  {
+    "title": "The Mystery of Marie Roget",
+    "author": "Edgar Allen Poe",
+    "date": "2016-02-13",
+    "pages": 17,
+    "response": 1,
+    "genre": "short fiction",
+    "completed": 1
+  },
+  {
+    "title": "The Purloined Letter",
+    "author": "Edgar Allen Poe",
+    "date": "2016-02-13",
+    "pages": 22,
+    "response": 2,
+    "genre": "short fiction",
+    "completed": 1
   }
 ]
 
