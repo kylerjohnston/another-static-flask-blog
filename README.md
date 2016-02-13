@@ -34,6 +34,10 @@ To build static pages:
 
     $ ./manage.py build
 
+To run tests:
+    
+    $ ./manage.py test
+
 To Do
 -----
 
