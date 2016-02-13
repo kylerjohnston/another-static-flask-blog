@@ -9,10 +9,10 @@ manager = Manager(app)
 
 @manager.command
 def build():
-    app.debug = False
-    app.testing = True
-    if(app.config['SHOW_DRAFTS']):
-        print('Warning: Draft posts will be visible in this build.')
+    app = create_app('production')
+    if(app.config['SHOW_DRAFTS'] | app.debug | app.testing):
+        print('WARNING!! This build will show drafts or is running in debug or testing mode.')
+    freezer.init_app(app)
     freezer.freeze()
 
 @manager.command
