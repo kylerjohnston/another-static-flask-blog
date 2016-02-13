@@ -32,7 +32,7 @@ To run the server:
 
 To build static pages:
 
-    $ export FLASK_CONFIG=production && ./manage.py build
+    $ ./manage.py build
 
 To Do
 -----
