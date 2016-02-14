@@ -13,9 +13,11 @@ $(function(){
 });
 
 // Mobile nav menu
-$(".menu").hide();
-$("#menu-open").click(function() {
-  $(".menu").toggle();
+$(function() {
+  $(".menu").hide();
+  $("#menu-open").click(function() {
+    $(".menu").toggle();
+  });
 });
 
 // Add captions to images
