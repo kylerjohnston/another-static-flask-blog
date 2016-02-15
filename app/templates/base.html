@@ -5,9 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="description" content="Kyle R. Johnston is a coder, teacher, writer, and a researcher of 19th-century British literature. He is currently a graduate student at the University of Illinois at Urbana-Champaign. He blogs about the intersection of coding and literary studies.">
     <title>{% block page_title %}{% endblock %}</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/layout.css') }}">
     <link rel="stylesheet" href="{{ url_for('main.pygments_css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/font-awesome-4.5.0/css/font-awesome.min.css') }}">
+    <!--<link rel="stylesheet" href="{{ url_for('static',
+      filename='css/font-awesome-4.5.0/css/font-awesome.min.css') }}">-->
+    {% assets "css_all" %}
+    <link rel="stylesheet" href="{{ ASSET_URL }}">
+    {% endassets %}
     <link rel="apple-touch-icon" sizes="57x57" href="{{ url_for('static', filename='img/apple-touch-icon-57x57.png') }}">
     <link rel="apple-touch-icon" sizes="60x60" href="{{ url_for('static', filename='img/apple-touch-icon-60x60.png') }}">
     <link rel="apple-touch-icon" sizes="72x72" href="{{ url_for('static', filename='img/apple-touch-icon-72x72.png') }}">
@@ -35,7 +38,7 @@
     <div class="container">
       <div class="header">
         <div class="header_left">
-          <h1 class="name"><a href="{{ url_for('main.blog') }}" class="name_nav">Kyle R. Johnston</a></h1>
+          <a href="{{ url_for('main.blog') }}" class="name_nav">Kyle R. Johnston</a>
         </div>
         <div class="header_right">
           <ul class="nav">
@@ -59,9 +62,6 @@
           <button id="menu-open"><i class="fa fa-bars"></i></button>
         </div>
       </div>
-      <aside class="hidden">
-        <p>Tag navigation will go here</p>
-      </aside>
       {% block page_content %}{% endblock %}
       <footer>
         <p class="footer">Built with <i class="fa fa-heart red"></i> using Python and Flask. <a href="http://github.com/kylerjohnston/another-static-flask-blog">View the source code on Github</a>.</p>

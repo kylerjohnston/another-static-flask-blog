@@ -1,0 +1,95 @@
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+.container {
+  position: absolute;
+  top: 0;
+  width: 95%;
+  padding: 0px;
+}
+
+/* Header and nav links stuff ***********************************************/
+
+.header {
+  position: relative;
+  top: 0px;
+  max-width: $max-width;
+  margin: 0 auto;
+  border-bottom: 2px solid $primary-color;
+  padding: 0;
+  height: $header-mobile-height;
+}
+
+.menu {
+  z-index: 10000000;
+  width: 100%;
+  position: absolute;
+  display: block;
+  margin-top: $header-mobile-height;
+  background-color: $background-color;
+}
+
+.header_left, .menu-button {
+  display: inline;
+  position: absolute;
+}
+
+.header_left {
+  left: 0;
+  bottom: 0.25em;
+}
+
+.menu-button {
+  right: 0;
+  bottom: 0.25em;
+}
+
+.header_right {
+  display: none;
+}
+
+/* Sections and articles *****************************************************/
+
+section {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 5px 10px 50px 10px;
+}
+
+article {
+  padding: 10px 0px 50px 0px;
+  border-bottom: 1px solid $secondary-color;
+}
+
+/* Footer ********************************************************************/
+
+footer {
+  position: relative;
+  display: block;
+  bottom: 40px;
+  margin: 0 auto;
+  max-width: $max-width;
+  height: 2em;
+  padding: 100px 10px 20px 10px;
+}
+
+@media only screen and (min-width: 800px) {
+  .header {
+    height: $header-height;
+  }
+
+  .header_right {
+    position: absolute;
+    display: inline;
+    right: 0;
+    bottom: 0.25em;
+    margin: 0;
+  }
+
+  .menu, .menu-button {
+    display: none;
+  }
+}

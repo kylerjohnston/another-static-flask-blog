@@ -1,0 +1,34 @@
+/* Global variables and settings */
+
+$max-width: 700px;
+$primary-color: #333333;
+$secondary-color: #666666;
+$tertiary-color: #c1c1c1;
+$header-mobile-height: 3.5em;
+$header-height: 150px;
+$background-color: #fdfdfd;
+$offset-bg: #f0f0f0;
+$body-font: 'Roboto', Helvetica, sans-serif;
+$heading-font: 'Bitter', Georgia, serif;
+$monospace-font: 'Source Code Pro', monospace;
+$light-red: #ae5a41;
+$dark-red: #683627;
+$light-blue: #1b85b8;
+$dark-blue: #125d80;
+$yellow-green: #c3cb71;
+
+@mixin border_radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+/* Required fonts */
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,700|Source+Code+Pro|Bitter);
+
+@import 'layout';
+@import 'global_style';
+@import 'typography';
+@import 'blog';
+@import 'tag_list';

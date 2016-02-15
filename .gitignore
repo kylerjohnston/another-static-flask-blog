@@ -4,4 +4,4 @@ app/build/
 app/build/*
 *.pyc
 *.swp
-
+*.webassets*

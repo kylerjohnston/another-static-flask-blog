@@ -1,0 +1,294 @@
+body {
+  color: $primary-color;
+  font-family: $body-font;
+  font-weight: 300;
+  line-height: 1.5;
+  background-color: $background-color;
+}
+
+/* Headings ******************************************************************/
+
+h1,h2,h3 {
+  font-family: $heading-font;
+  font-weight: 400;
+  line-height: 1.2;
+  padding: 1em 0 0 0;
+  margin: 0;
+}
+
+.heading {
+  display: block;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+small.heading {
+  font-size: 0.75em;
+  color: $secondary-color;
+}
+
+/* Body text *****************************************************************/
+
+p.footer {
+  color: $secondary-color;
+  font-size: 0.75em;
+  margin: 0;
+}
+
+small.tag_date {
+  font-size: 0.75em;
+  display: block;
+  font-style: italic;
+  color: $secondary-color;
+}
+
+/* Links *********************************************************************/
+
+a {
+  color: $light-blue;
+  text-decoration: none;
+}
+
+a:hover {
+  color: $dark-blue;
+  text-decoration: underline;
+}
+
+a.nav, a.name_nav {
+  color: $primary-color;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  text-decoration: none;
+}
+
+.red, a.atom {
+  font-size: 1em;
+  text-decoration: none;
+  color: $light-red;
+}
+
+a.atom:hover {
+  color: $dark-red;
+}
+
+a.name_nav:hover, a.nav:hover {
+  font-weight: 400;
+  color: $light-blue;
+}
+
+a.selected, a.selected:hover {
+  font-weight: 400;
+  color: $dark-blue;
+}
+
+a.post_title {
+  color: $primary-color;
+  text-decoration: none;
+}
+
+a.post_title:hover {
+  color: $primary-color;
+  text-decoration: underline;
+}
+
+a.comment, a.comment:hover {
+  color: $primary-color;
+  text-decoration: none;
+}
+
+a.tags {
+  text-decoration: none;
+}
+
+a.tag_list {
+  font-size: 1.25em;
+}
+
+a.page_button {
+  @include border_radius(4px);
+  padding: 10px;
+  border: 1px solid $light-blue;
+}
+
+a.page_button:hover {
+  border: 2px solid $dark-blue;
+}
+
+a.dead_button {
+  color: $tertiary-color;
+  padding: 10px;
+  border: 1px solid $tertiary-color;
+  @include border_radius(4px);
+}
+
+a.projects {
+  color: $primary-color;
+  font-size: 1.3em;
+}
+
+a.projects:hover {
+  color: $secondary-color;
+}
+
+/* Lists *********************************************************************/
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  margin-left: 20px;
+}
+
+ul.nav {
+  list-style: none;
+}
+
+li.nav {
+  text-align: center;
+  padding: 1em 0 1em 0;
+}
+
+ul,li.tags {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+
+ul.tag_list {
+  list-style-type: none;
+}
+
+/* Tables ********************************************************************/
+
+table {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+th {
+  background-color: $secondary-color;
+  color: $background-color;
+  font-weight: 400;
+  text-align: center;
+  padding: 10px;
+}
+
+td {
+  padding: 10px;
+}
+
+tr:nth-child(even) {
+  background-color: $yellow-green;
+}
+
+tr.invisible {
+  background-color: $background-color;
+}
+
+/* Code blocks ***************************************************************/
+
+code {
+  font-family: $monospace-font;
+  font-weight: 400;
+  font-size: 0.9em;
+  background-color: $offset-bg;
+  color: $light-red;
+  padding: 3px;
+  @include border_radius(4px);
+}
+
+pre {
+  font-family: $monospace-font;
+  font-weight: 400;
+  font-size: 0.9em;
+  padding: 10px;
+  @include border_radius(4px);
+}
+
+/* Blockquotes ***************************************************************/
+
+blockquote {
+  font-size: 0.9em;
+  color: $secondary-color;
+  font-weight: 400;
+  background-color: $offset-bg;
+  margin: 0;
+  padding: 1em 2em 1em 2em;
+  border-left: 5px solid $secondary-color;
+  @include border_radius(4px);
+}
+
+/* Images and captions *******************************************************/
+
+figcaption {
+  font-style: italic;
+  font-size: 0.8em;
+  text-align: center;
+}
+
+/* Buttons *******************************************************************/
+
+button#menu-open {
+  background-color: $background-color;
+  border: 2px solid $primary-color;
+  @include border_radius(4px);
+}
+
+/* Footnotes *****************************************************************/
+
+.footnote {
+  font-size: 0.9em;
+}
+
+.footnote ol {
+  margin: 0;
+  padding: 0;
+}
+
+hr {
+  border-top: 1px dotted $secondary-color;
+  border-bottom: 0;
+  border-right: 0;
+  border-left: 0;
+  text-align: center;
+}
+
+hr:after {
+  content: '§';
+  display: inline-block;
+  position: relative;
+  color: $secondary-color;
+  top: -13px;
+  padding: 0 1em 0 1em;
+  background: $background-color;
+}
+
+/* Media queries *************************************************************/
+
+@media only screen and (min-width: 800px) {
+  ul.nav, li.nav {
+    display: inline;
+  }
+
+  li.nav {
+    padding-right: 10px;
+  }
+
+  a.nav, a.name_nav {
+    font-size: 0.9em;
+  }
+}

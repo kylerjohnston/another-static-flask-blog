@@ -17,6 +17,7 @@ def create_app(config_name):
     freezer.init_app(app)
     assets.init_app(app)
     assets.register('js_all', asset_bundle.js_all)
+    assets.register('css_all', asset_bundle.css)
 
     from .main import main as main_blueprint
     app.register_blueprint(main_blueprint)
