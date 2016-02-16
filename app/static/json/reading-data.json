@@ -61,6 +61,30 @@
     "response": 2,
     "genre": "short fiction",
     "completed": 1
+  },
+  {
+    "title": "The Power of Knowledge: Poe's Detection Fiction and the Ideology of Rationalism",
+    "author": "Jon Thompson",
+    "date": "2016-02-15",
+    "pages": 6,
+    "genre": "literary criticism",
+    "completed": 1
+  },
+  {
+    "title": "The Man with the Twisted Lip",
+    "author": "Arthur Conan Doyle",
+    "date": "2016-02-14",
+    "pages": 18,
+    "genre": "short fiction",
+    "completed": 1
+  },
+  {
+    "title": "The Man of Mode",
+    "author": "George Etheridge",
+    "date": "2016-02-15",
+    "pages": 34,
+    "genre": "drama",
+    "completed": 0
   }
 ]
 

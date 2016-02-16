@@ -1,3 +1,5 @@
+@import 'base';
+
 body {
   color: $primary-color;
   font-family: $body-font;
@@ -125,7 +127,7 @@ a.page_button:hover {
   border: 2px solid $dark-blue;
 }
 
-a.dead_button {
+a.dead_button, a.dead_button:hover {
   color: $tertiary-color;
   padding: 10px;
   border: 1px solid $tertiary-color;
@@ -246,6 +248,7 @@ button#menu-open {
   background-color: $background-color;
   border: 2px solid $primary-color;
   @include border_radius(4px);
+  padding: 1em;
 }
 
 /* Footnotes *****************************************************************/
