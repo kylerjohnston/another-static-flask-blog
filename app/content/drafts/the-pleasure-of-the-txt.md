@@ -23,8 +23,6 @@ I write on a mid-2012 Macbook Pro. My instructions below are specific to OS X, b
 
 * **A plain text editor**. This can be something as simple as TextEdit on a Mac or Notepad on Windows. There are also, at least for OS X, several editors made specifically for editing markdown and targeted at writers, such as ByWord, iA Writer, and WriteRoom. If you don’t write code, these might be your best bets---I’ve had good results with ByWord in the past. More advanced options like Atom, Sublime Text, Emacs, and Vim will be more customizable and support advanced features like syntax highlighting and autocompletion.  I use Vim and MacVim. I’ll give some tips on making Vim work well with prose writing below, but you should feel free to try out several editors---Vim has a steep (but rewarding!) learning curve, and you should use whatever editor works best for you.
 
-![Editing this post in markdown using MacVim]({{ url_for('static', filename='img/macvim_markdown.png') }})
-
-* **Pandoc**. Pandoc is a utility that can convert Markdown documents to basically any other format you want. 
+* **Pandoc**. [Pandoc](http://pandoc.org) is a utility that can convert Markdown documents to basically any other format you want. 
 
 * **A LaTeX installation**. Pandoc needs a LaTeX installation to convert your files to PDFs. If you’re on OS X, [MacTeX](http://tug.org/mactex/) is what you want. The BasicTex package will suffice, but I’d recommend installing the [TeX Live Utility](http://amaxwell.github.io/tlutility/) too if you go that route (it’s included with the full MacTeX package). After installing your TeX package, open the TeX Live Utility and update all packages.

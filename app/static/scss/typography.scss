@@ -128,6 +128,7 @@ a.page_button:hover {
 }
 
 a.dead_button, a.dead_button:hover {
+  text-decoration: none;
   color: $tertiary-color;
   padding: 10px;
   border: 1px solid $tertiary-color;
