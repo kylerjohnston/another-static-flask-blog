@@ -206,32 +206,22 @@ tr.invisible {
 code {
   font-family: $monospace-font;
   font-weight: 400;
-  font-size: 0.9em;
-  background-color: $offset-bg;
   color: $light-red;
   padding: 3px;
-  @include border_radius(4px);
 }
 
 pre {
   font-family: $monospace-font;
   font-weight: 400;
-  font-size: 0.9em;
   padding: 10px;
-  @include border_radius(4px);
 }
 
 /* Blockquotes ***************************************************************/
 
 blockquote {
   font-size: 0.9em;
-  color: $secondary-color;
-  font-weight: 400;
-  background-color: $offset-bg;
-  margin: 0;
+  font-weight: 300;
   padding: 1em 2em 1em 2em;
-  border-left: 5px solid $secondary-color;
-  @include border_radius(4px);
 }
 
 /* Images and captions *******************************************************/
