@@ -20,7 +20,7 @@ class Config:
     FREEZER_RELATIVE_URLS = False
     MARKDOWN_EXTENSIONS = ['footnotes',
                            'smarty',
-                           'codehilite']
+                           'codehilite(linenums=False)']
     FLATPAGES_AUTO_RELOAD = True
     FLATPAGES_HTML_RENDERER = prerender_jinja
     FREEZER_DESTINATION_IGNORE = ['.gitignore',
