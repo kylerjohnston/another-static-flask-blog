@@ -85,6 +85,22 @@
     "pages": 34,
     "genre": "drama",
     "completed": 0
+  },
+  {
+    "title": "When Man Falls, A Crowd Gathers",
+    "author": "Stephen Crane",
+    "date": "2016-02-17",
+    "pages": 5,
+    "genre": "short fiction",
+    "completed": 1
+  },
+  {
+    "title": "The Metropolis and Mental Life",
+    "author": "Georg Simmel",
+    "date": "2016-02-17",
+    "pages": 9,
+    "genre": "sociology",
+    "completed": 1
   }
 ]
 

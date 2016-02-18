@@ -3,7 +3,6 @@ date: 16 February 2016
 tags:
 - humanities
 - writing
-- vim
 
 Microsoft Word is the de facto standard application for writing in the humanities. We write, collaborate, and disseminate our works in `.docx` format. There are lots of things I dislike about Word: its lack of portability, for one, and how it forces you to be tied into the Microsoft ecosystem, or how easily the formatting of an entire document can get messed up by dropping in a single figure or table. The biggest problem with Word, though, is that it just doesn’t match up with the way we write. Writing and typesetting are different, distinct parts of the writing process, but in Word they are combined into one task. As we write we must also always be formatting, thinking not just about our words but about how they will appear on the paper. We fiddle with fonts and line spacing and ligatures when we should be getting down words.
 
