@@ -21,7 +21,7 @@ class Config:
     MARKDOWN_EXTENSIONS = ['footnotes',
                            'smarty',
                            'codehilite(linenums=False)']
-    FLATPAGES_AUTO_RELOAD = True
+    FLATPAGES_AUTO_RELOAD = False
     FLATPAGES_HTML_RENDERER = prerender_jinja
     FREEZER_DESTINATION_IGNORE = ['.gitignore',
                                   '.git/',

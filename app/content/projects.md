@@ -19,10 +19,10 @@ This site
 
 **Technologies**: Python, Flask, jQuery and Javascript, HTML, CSS and SCSS<br />
 **Features**: Responsive design, lightweight<br />
-**Deployment**: Github Pages<br />
+**Deployment**: Ubuntu VPS with Nginx and Gunicorn<br />
 <a href="/" class="projects"><i class="fa fa-home"></i></a> <a href="http://github.com/kylerjohnston/another-static-flask-blog" class="projects"><i class="fa fa-github"></i></a>
 
-My goal for this project was to make a blog with a minimalist aesthetic that's really easy to manage. I think I accomplished it. All content is written in Markdown. Using Flask-Frozen, the whole site can be exported into static HTML files which can easily be pushed to Github Pages with `git`. Very easy to manage and simple to deploy.
+My goal for this project was to make a blog with a minimalist aesthetic that's really easy to manage. I think I accomplished it. All content is written in Markdown. Using Flask-Frozen, the whole site can be exported into static HTML files, or it can be routed through Flask and served using Gunicorn.
 
 sethbaker.me
 ------------
