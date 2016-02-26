@@ -24,7 +24,7 @@ def page_test(page_num):
         older_pages = False
     return older_pages, newer_pages
 
-@main.route('/blog/')
+@main.route('/')
 def blog():
     older_pages, newer_pages = page_test(1)
     return render_template('blog.html',
@@ -51,7 +51,7 @@ def post(post_name):
     return render_template('post.html',
                            post = page)
 
-@main.route('/')
+@main.route('/about')
 def about():
     return render_template('static.html',
                            post = flatpages.get_or_404('about'))

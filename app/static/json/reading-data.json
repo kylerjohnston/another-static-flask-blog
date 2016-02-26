@@ -101,6 +101,46 @@
     "pages": 9,
     "genre": "sociology",
     "completed": 1
+  },
+  {
+    "title": "The Rover",
+    "author": "Aphra Behn",
+    "date": "2016-02-19",
+    "pages": 55,
+    "genre": "drama",
+    "completed": 1
+  },
+  {
+    "title": "The Rover Part II",
+    "author": "Aphra Behn",
+    "date": "2016-02-24",
+    "pages": 31,
+    "genre": "drama",
+    "completed": 1
+  },
+  {
+    "title": "The Rover Part II",
+    "author": "Aphra Behn",
+    "date": "2016-02-23",
+    "pages": 107,
+    "genre": "drama",
+    "completed": 0
+  },
+  {
+    "title": "Revisioning the Female Body: Aphra Behn's The Rover, Parts I and II",
+    "author": "Aphra Behn",
+    "date": "2016-02-24",
+    "pages": 17,
+    "genre": "literary criticism",
+    "completed": 1
+  },
+  {
+    "title": "Streetwalking the Metropolis: Women, the City, and Modernity",
+    "author": "Deborah Parsons",
+    "date": "2016-02-26",
+    "pages": 18,
+    "genre": "literary criticism",
+    "completed": 1
   }
 ]
 
