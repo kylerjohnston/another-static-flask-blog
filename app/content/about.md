@@ -9,8 +9,8 @@ After several years in academia, I’ve decided to seek a new path as a web deve
 Skills
 ------
 
-I know my way around Linux and shell scripting---I use Arch Linux at home but I can work with Red Hat- or Debian-based distributions---and have experience deploying sites on Apache and Nginx, as well as cloud providers like Heroku. I’m skilled at developing well-tested and well-documented APIs with Python and responsive user interfaces with Javascript and HTML/CSS/Sass. But of course I’m always looking to learn more!
+I consider myself on track to becoming a full stack developer. I know my way around Linux and shell scripting---I use Arch Linux at home but I can work with Red Hat- or Debian-based distributions---and have experience deploying sites using Apache and Nginx, as well as cloud providers like Heroku. I’m skilled at developing well-tested and well-documented APIs with Python and responsive user interfaces with Javascript, jQuery and HTML/CSS/SASS. But of course I’m always looking to learn more! I’m planning on learning Angular for my next project.
 
-I'm in an English MA program now, so a lot of the work I've been doing recently has to do with integrating web technologies into literary research. I made [Balladmonger](http://balladmonger.kylerjohnston.com), for example, in an attempt to reimagine the aesthetic of early modern ballads in a twenty-first-century web app.
+I'm in an English MA program now, so a lot of the work I've been doing recently has to do with integrating web technologies into literary research. I made [Today I Read...](https://todayiread.xyz), for example, to help me keep track of my reading in grad school. I made [Balladmonger](http://balladmonger.kylerjohnston.com) in an attempt to reimagine the aesthetic of early modern ballads in a twenty-first-century web app.
 
 You can [take a look at my projects]({{ url_for('main.projects') }}) or [check out my Github](http://github.com/kylerjohnston) to see what I've been working on lately.
