@@ -141,6 +141,30 @@
     "pages": 18,
     "genre": "literary criticism",
     "completed": 1
+  },
+  {
+    "title": "The Web of Inquiry: Early Detective Fiction by American Women",
+    "author": "Catherine Nickerson",
+    "date": "2016-02-27",
+    "pages": 14,
+    "genre": "literary criticism",
+    "completed": 1
+  },
+  {
+    "title": "The Staircase at the Heart's Delight",
+    "author": "Anna Katharine Green",
+    "date": "2016-02-27",
+    "pages": 14,
+    "genre": "short fiction",
+    "completed": 1
+  },
+  {
+    "title": "Talma Gordon",
+    "author": "Pauline E. Hopkins",
+    "date": "2016-02-27",
+    "pages": 24,
+    "genre": "short fiction",
+    "completed": 1
   }
 ]
 

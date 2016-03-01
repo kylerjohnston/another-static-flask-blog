@@ -2,6 +2,24 @@ title: Projects
 
 Here are some things I’ve made on the internet.
 
+Today I Read...
+---------------
+
+**Technologies**: Python, Flask, jQuery, D3.js, SASS<br />
+**Features**: CRUD, secure user login and authentication, RESTful API<br />
+**Deployment**: Ubuntu VPS with Nginx and Gunicorn; PostgreSQL and SQLite<br />
+<a href="http://todayiread.xyz" class="projects"><i class="fa fa-home"></i></a> <a href="http://github.com/kylerjohnston/todayiread" class="projects"><i class="fa fa-github"></i></a>
+
+Developed over two weekends, Today I Read... helps you keep track of your reading progress. Set goals. Track what you've read. Visualize your reading habits with sweet graphs.
+
+I developed Today I Read... so I could keep track of the reading I was doing for school and visualize my reading habits. I used to use Goodreads to keep track of my reading, but I found that it didn't match up with the kinds of reading I did in grad school: I wasn't reading books, I was reading chapters and journal articles, and Goodreads didn't let you record those things. Today I Read... lets you track any kind of reading you want.
+
+![Today I Read... welcome page]({{ url_for('static', filename='img/project-screenshots/todayiread-screenshot-welcome.png') }})
+
+![Today I Read... user home page]({{ url_for('static', filename='img/project-screenshots/todayiread-screenshot-home.png') }})
+
+![Today I Read... settings page]({{ url_for('static', filename='img/project-screenshots/todayiread-screenshot-settings.png') }})
+
 Balladmonger
 ------------
 

@@ -4,7 +4,7 @@ def get_pages(posts):
     """ Groups blog posts into 'pages' of five posts """
     pages = []
     for i in range(4, len(posts), 5):
-        pages.append(posts[i-4: i])
+        pages.append(posts[i-4: i+1])
     r = len(posts) % 5
     if r > 0:
         pages.append(posts[len(posts) - r:])
