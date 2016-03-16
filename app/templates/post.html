@@ -20,6 +20,20 @@
       <div id="disqus_thread"></div>
     </article>
   </section>
+  <script>
+     var disqus_config = function () {
+       this.page.url = "{{ url_for('main.post', post_name = post.slug, _external = True) }}";
+       this.page.identifier = "{{ post.slug }}"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+     };
+  (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+
+    s.src = '//kylerjohnston.disqus.com/embed.js';
+
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+  </script>
 {% endblock %}
 
 {% block additional_scripts %}

@@ -1,13 +1,27 @@
 title: Projects
 
-Here are some things I’ve made on the internet.
+Here is a running list of some things I’ve made on the internet.
+
+sethbaker.me
+------------
+
+**Technologies**: Python, Flask, Bootstrap, SASS<br />
+**Features**: Responsive design, secure login and user authentication, custom CRUD blog app<br />
+**Deployment**: Ubuntu VPS with Nginx, Gunicorn, and PostgreSQL<br />
+<a href="http://sethbaker.me" class="projects"><i class="fa fa-home"></i></a>
+
+Seth is a good friend of mine running for State Senate in Portland, Maine. I developed and deployed this website to support his campaign. It features a lightweight, custom CMS, written in Flask, that can be used to create, edit, and delete blog entries.
+
+![sethbaker.me - mobile screenshot]({{ url_for('static', filename='img/project-screenshots/sethbaker-me-screenshot.png') }})
+
+![sethbaker.me]({{ url_for('static', filename='img/project-screenshots/sethbaker-me-screenshot2.png') }})
 
 Today I Read...
 ---------------
 
 **Technologies**: Python, Flask, jQuery, D3.js, SASS<br />
 **Features**: CRUD, secure user login and authentication, RESTful API<br />
-**Deployment**: Ubuntu VPS with Nginx and Gunicorn; PostgreSQL and SQLite<br />
+**Deployment**: Ubuntu VPS with Nginx and Gunicorn; PostgreSQL<br />
 <a href="http://todayiread.xyz" class="projects"><i class="fa fa-home"></i></a> <a href="http://github.com/kylerjohnston/todayiread" class="projects"><i class="fa fa-github"></i></a>
 
 Developed over two weekends, Today I Read... helps you keep track of your reading progress. Set goals. Track what you've read. Visualize your reading habits with sweet graphs.
@@ -35,21 +49,11 @@ Balladmonger is a small web app built with Python and Flask which dynamically ge
 This site
 ---------
 
-**Technologies**: Python, Flask, jQuery and Javascript, HTML, CSS and SCSS<br />
+**Technologies**: Python, Flask, jQuery and Javascript, HTML, CSS and SASS<br />
 **Features**: Responsive design, lightweight<br />
 **Deployment**: Ubuntu VPS with Nginx and Gunicorn<br />
 <a href="/" class="projects"><i class="fa fa-home"></i></a> <a href="http://github.com/kylerjohnston/another-static-flask-blog" class="projects"><i class="fa fa-github"></i></a>
 
 My goal for this project was to make a blog with a minimalist aesthetic that's really easy to manage. I think I accomplished it. All content is written in Markdown. Using Flask-Frozen, the whole site can be exported into static HTML files, or it can be routed through Flask and served using Gunicorn.
 
-sethbaker.me
-------------
 
-**Technologies**: Python, Flask, Bootstrap<br />
-**Features**: Responsive design<br />
-**Deployment**: Shared hosting<br />
-<a href="http://sethbaker.me" class="projects"><i class="fa fa-home"></i></a>
-
-Seth is a good friend of mine running for State Senate in Portland, Maine. I made this website to support his campaign. It has static content about his platform and links to donate on Paypal. I used Flask-Frozen to generate static HTML pages to upload on shared hosting.
-
-![sethbaker.me]({{ url_for('static', filename='img/project-screenshots/sethbaker-me-screenshot.png') }})

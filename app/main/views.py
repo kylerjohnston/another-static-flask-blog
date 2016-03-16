@@ -33,8 +33,6 @@ def blog():
                            older_pages = False,
                            page_num = 1)
 
-
-
 @main.route('/pages/<num>/')
 def pages(num):
     num = int(num)
