@@ -2,6 +2,12 @@
 
 {% block page_title %}{{ post.title }}{% endblock %}
 
+{% if description %}
+{% block meta_description %}
+<meta name="description" content="{{ description }}">
+{% endblock %}
+{% endif %}
+
 {% block page_content %}
   <section>
     <article>

@@ -1,5 +1,6 @@
 title: On sitting down to reflect on making some ballads again
 date: 01 January 2016
+description: "A reflection on the process of creating and the literary implications of Balladmonger, a web app designed to remediate the aesthetic experience of early modern ballads into a 21st-century web application."
 tags:
   - shakespeare
   - literary-studies

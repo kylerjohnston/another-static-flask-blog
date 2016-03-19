@@ -1,5 +1,6 @@
 title: "What makes a bestseller? Modeling literary prestige in the 19th and 20th centuries"
 date: 08 February 2016
+description: "Can we make a model predict which works of fiction will be bestsellers? What does this model tell us about literary-historical trends?"
 tags:
   - text-mining
   - literary-studies

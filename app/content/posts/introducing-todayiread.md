@@ -1,5 +1,6 @@
 title: "Introducing: Today I Read"
 date: 29 February 2016
+description: "Introducing Today I Read (todayiread.xyz), a web app designed to help users keep track of what they're reading and visualize their reading habits"
 tags:
   - webdev
   - projects

@@ -1,5 +1,6 @@
 title: "What I’m reading: January 2016"
 date: 31 January 2016
+description: "What Kyle was reading, January 2016"
 tags:
   - reading
 

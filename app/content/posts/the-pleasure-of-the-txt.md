@@ -1,5 +1,6 @@
 title: "The pleasure of the TXT: Writing in plain text in the humanities"
 date: 16 February 2016
+description: "A guide to writing MLA-style papers using plain text files, markdown syntax, and the pandoc document conversion utility."
 tags:
 - humanities
 - writing

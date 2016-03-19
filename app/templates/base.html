@@ -3,11 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="Kyle Johnston is a coder, teacher, writer, and a researcher of 19th-century British literature. He is currently a graduate student at the University of Illinois at Urbana-Champaign. He blogs about the intersection of coding and literary studies.">
     <title>{% block page_title %}{% endblock %}</title>
+    {% block meta_description %}{% endblock %}
     <link rel="stylesheet" href="{{ url_for('main.pygments_css') }}">
-    <!--<link rel="stylesheet" href="{{ url_for('static',
-      filename='css/font-awesome-4.5.0/css/font-awesome.min.css') }}">-->
     {% assets "css_all" %}
     <link rel="stylesheet" href="{{ ASSET_URL }}">
     {% endassets %}
