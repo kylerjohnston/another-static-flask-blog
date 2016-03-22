@@ -1,0 +1,266 @@
+@import 'base';
+
+body {
+  background-color: $pink-white;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+  font-family: $mainfont;
+  font-weight: 200;
+  font-size: 4em;
+  line-height: 1;
+  color: $fg;
+}
+
+h2 {
+  margin: 0;
+  padding: 0;
+  font-family: $mainfont;
+  font-weight: 200;
+  font-size: 3em;
+  line-height: 1;
+}
+
+h3 {
+  padding: 0;
+  margin: 0;
+  font-family: $mainfont;
+  font-weight: 200;
+  font-size: 2em;
+  line-height: 1;
+}
+
+#sethbaker {
+  color: $pink-white;
+  background-color: $mauve;
+}
+
+#todayiread {
+  color: $mauve;
+  background-color: $pink-white;
+}
+
+#balladmonger {
+  color: $mauve;
+  background-color: $pink-white;
+}
+
+#iamkyle {
+  color: $pink-white;
+  background-color: $purple;
+}
+
+#skills {
+  color: $pink-white;
+  background-color: $mauve;
+}
+
+#contact {
+  color: $pink-white;
+  background-color: $purple;
+}
+
+.footnote {
+  display: block;
+  font-family: $mainfont;
+  font-weight: 200;
+  font-size: 0.9em;
+}
+
+dd, dt {
+  font-family: $mainfont;
+  font-size: 1.25em;
+  margin: 0;
+  padding: 0.5em 0 0.5em 0;
+}
+
+dd {
+  font-weight: 200;
+  margin-left: 160px;
+}
+
+dt {
+  float: left;
+  clear: left;
+  width: 150px;
+  font-weight: 400;
+}
+
+.subheading {
+  display: block;
+  line-height: 1;
+  padding: 1em 0 0.5em 0;
+  font-family: $mainfont;
+  font-weight: 400;
+  font-size: 1.5em;
+  color: $fg;
+}
+
+.project-subheading {
+  display: block;
+  line-height: 1;
+  font-family: $mainfont;
+  font-size: 1em;
+  font-weight: 200;
+  padding: 1em 0 0 0;
+}
+
+#about p {
+  padding: 0.5em 1em 0.5em 1em;
+  max-width: 600px;
+  font-family: $mainfont;
+  color: $fg;
+  font-size: 1.25em;
+  line-height: 1.3;
+  font-weight: 400;
+  margin: 0 auto;
+  text-align: left;
+}
+
+#projects p {
+  font-family: $mainfont;
+  font-size: 1.25em;
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+.feature-list li {
+  list-style-type: circle;
+  text-align: left;
+  margin-left: 1em;
+  padding: 0;
+  display: list-item;
+  font-family: $mainfont;
+  font-size: 1.25em;
+  font-weight: 400;
+}
+
+.feature-list {
+  padding: 1em 0 0 0;
+  margin: 0 0 0 1em;
+}
+
+.external-links {
+  list-style-type: none;
+  margin: 0;
+  padding: 0.5em 0 1em 0;
+}
+
+.external-links a {
+  color: $pink;
+  text-decoration: none;
+  font-size: 3em;
+  @include transition(color, .25s);
+}
+
+.external-links a:hover {
+  color: $mauve;
+  @include transition(color, .25s);
+}
+
+.nav-menu a {
+  font-size: 3em;
+}
+
+.nav-menu a, .sticky a {
+  font-family: $mainfont;
+  text-transform: uppercase;
+  color: $pink-white;
+  font-weight: 200;
+  text-decoration: none;
+  @include transition(border-bottom-color, .25s);
+}
+
+a.selected {
+  border-bottom: 1px solid $pink-white;
+}
+
+.sticky a:hover, .nav-menu a:hover {
+  border-bottom: 1px solid $pink-white;
+  @include transition(border-bottom, .25s);
+}
+
+.nav-menu a:active {
+  color: $pink;
+}
+
+#sethbaker a, #contact a {
+  @include project-link($pink-white);
+}
+
+#sethbaker a:hover, #contact a:hover {
+  @include project-link($fg);
+}
+
+#todayiread a {
+  @include project-link($mauve);
+}
+
+#todayiread a:hover {
+  @include project-link($pink);
+}
+
+#balladmonger a {
+  @include project-link($mauve);
+}
+
+#balladmonger a:hover {
+  @include project-link($pink);
+}
+
+#iamkyle a {
+  @include project-link($pink-white);
+}
+
+#iamkyle a:hover {
+  @include project-link($fg);
+}
+
+.nav-button button {
+  font-size: 1.5em;
+  color: $pink-white;
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  border: none;
+}
+
+footer {
+  background-color: $pink;
+  color: $pink-white;
+  font-family: $mainfont;
+  font-weight: 200;
+  font-size: 0.9em;
+  line-height: 1.1;
+  text-align: center;
+}
+
+footer p {
+  padding: 0;
+  margin: 0;
+}
+
+footer a {
+  @include project-link($pink-white);
+}
+
+footer a:hover {
+  @include project-link($mauve);
+}
+
+@media only screen and (min-width: 375px) {
+  h1 {
+    font-size: 5em;
+  }
+
+}
+
+@media only screen and (min-width: 801px) {
+  .sticky a, .nav-menu a {
+    font-size: 1.25em;
+  }
+}

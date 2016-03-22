@@ -1,0 +1,141 @@
+@import 'base';
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.sticky {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  text-align: center;
+  width: 100%;
+  height: auto;
+  background-color: $pink;
+  margin: 0;
+  padding: 1em;
+}
+
+.nav-menu {
+  display: none;
+  position: absolute;
+  height: 100%;
+  z-index: 1000;
+  background-color: $purple;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.nav-menu ul, li {
+  list-style-type: none;
+  margin: 0;
+  text-align: center;
+}
+
+.nav-menu ul {
+  padding: 5em 0 0 0;
+}
+
+.nav-menu li {
+  padding: 1em 0 0 0;
+}
+
+.nav-button {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  z-index: 10000;
+}
+
+#about {
+  margin: 0;
+  padding: 3em 0 0 0;
+  position: relative;
+  height: auto;
+  text-align: center;
+  background-image: url('/static/img/portfolio/library-background.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.project {
+  clear: both;
+  margin: 0;
+  padding: 0 0 3em 0;
+  overflow: hidden;
+}
+
+.description {
+  clear: both;
+  margin: 0 auto;
+  max-width: 600px;
+  padding: 5em 1em 5em 1em;
+}
+
+.project-description, .project-screenshots {
+  padding: 5em 1em 0 1em;
+  width: 100%;
+}
+
+#nav-menu {
+  transition: all 0.4s ease;
+}
+
+footer {
+  padding: 1em;
+}
+
+@media only screen and (min-width: 801px) {
+  #about {
+    height: 100%;
+  }
+  
+  .nav-menu {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    z-index: 1000;
+    width: 100%;
+    text-align: center;
+    padding: 0 0 1em 0;
+    height: auto;
+    background-color: Transparent;
+  }
+
+  .nav-menu ul, .nav-menu li, .sticky ul, .sticky li {
+    display: inline;
+    text-align: left;
+  }
+
+  .nav-menu li, .sticky li {
+    padding: 0 1em 0 1em;
+  }
+
+  .nav-button {
+    display: none;
+  }
+
+  .project-screenshots, .project-description {
+    width: 50%;
+  }
+
+  .project-description {
+    float: left;
+  }
+
+  .project-screenshots {
+    float: right;
+  }
+}

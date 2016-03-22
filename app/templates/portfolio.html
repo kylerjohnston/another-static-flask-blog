@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Kyle R. Johnston's Portfolio -- Full Stack Web Developer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/font-awesome-4.5.0/css/font-awesome.min.css') }}">
+    {% assets "portfolio_css" %}
+    <link rel="stylesheet" href="{{ ASSET_URL }}">
+    {% endassets %}
+  </head>
+  <body>
+    <div class="nav-button">
+      <button id="menu-open"><i class="fa fa-bars"></i></button>
+    </div>
+    <div class="nav-menu" id="nav-menu">
+      <ul>
+        <li><a class="nav" href="#projects">Projects</a></li>
+        <li><a class="nav" href="#skills">Skills</a></li>
+        <li><a class="nav" href="#contact">Contact</a></li>
+        <li><a href="{{ url_for('main.blog') }}">Blog</a></li>
+      </ul>
+    </div>
+    <section id="about">
+      <!-- Background image from http://barnimages.com/bookstore/ -->
+      <h1>Kyle R. Johnston</h1>
+      <small class="subheading">Writer, researcher, full stack web developer</small>
+      <p>I’m a freelance, full-stack web developer and a graduate student in the English department at the University of Illinois at Urbana-Champaign where I research literary-historical trends using quantitative methods such as text-mining and topic modeling.</p>
+      <p>My passion is solving problems with code. As I reach the end of my Master’s degree program, I’ve decided to leave the world of humanities academia to become a professional web developer. I believe web technologies have the potential to change our society for the better, and I want to be a part of the vanguard spurring that change.</p>
+      <ul class="external-links">
+        <li><a href="http://github.com/kylerjohnston"><i class="fa fa-github"></i></a></li>
+      </ul>
+      </div>
+    </section>
+    <section id="projects">
+      <div class="project" id="todayiread">
+        <div class="project-description">
+          <h2><a href="https://todayiread.xyz">todayiread.xyz</a></h2>
+          <small class="project-subheading">March 2016 <a href="https://github.com/kylerjohnston/todayiread">View source code</a></small>
+          <p>Developed over two weekends, todayiread.xyz helps you keep track of your reading progress. Set goals. Track what you’ve read. Visualize your reading habits with sweet graphs.</p>
+          <p>I developed todayiread.xyz so I could keep track of the reading I was doing for school and visualize my reading habits. I used to use Goodreads to keep track of my reading, but I found that it didn’t match up with the kinds of reading I did in grad school: I wasn’t reading books, I was reading chapters and journal articles, and Goodreads didn’t let you record those things. todayiread.xyz lets you track any kind of reading you want. This is still very much a work in progress: it's more of a proof of concept than anything right now.</p>
+          <h3>Features</h3>
+          <ul class="feature-list">
+            <li>CRUD interface for managing reading sessions and user settings</li>
+            <li>Secure log in, email verification, user authentication</li>
+            <li>RESTful API</li>
+            <li>Data visualization using d3.js</li>
+          </ul>
+        </div>
+        <div class="project-screenshots">
+          <h2>This is where the screenshots will go</h2>
+        </div>
+      </div>
+      <div class="project" id="sethbaker">
+        <div class="project-description">
+          <h2><a href="https://sethbaker.me">sethbaker.me</a></h2>
+          <small class="project-subheading">February 2016</small>
+          <p>Seth is a good friend of mine running for State Senate in Portland, Maine. I developed and deployed this brochure website to support his campaign. It features a lightweight, custom CMS, written in Flask, that can be used to create, edit, and delete blog entries.</p>
+          <h3>Features</h3>
+          <ul class="feature-list">
+            <li>Responsive, mobile-first UI</li>
+            <li>CRUD admin interface</li>
+            <li>Secure log in, user authentication</li>
+          </ul>
+        </div>
+        <div class="project-screenshots">
+          <h2>This is where the screenshots will go</h2>
+        </div>
+      </div>
+      <div class="project" id="iamkyle">
+        <div class="project-description">
+          <h2><a href="https://iamkyle.me">iamkyle.me</a></h2>
+          <small class="project-subheading">January 2016 <a href="https://github.com/kylerjohnston/another-static-flask-blog">View source code</a></small>
+          <p>I wanted a place to write about the research I was doing in grad school and about my experience transitioning from an academic career in the humanities to a career in the tech industry&mdash;so I made this blog. My goal for this project was to make a blog with a minimalist aesthetic that’s really easy to manage. At first the site was hosted on Github pages, so my main goal was to use Flask to generate static HTML pages from markdown files. Now it's deployed on an Ubuntu VPS and runs dynamically.</p>
+          <h3>Features</h3>
+          <ul class="feature-list">
+            <li>Responsive UI</li>
+            <li>Content generated from markdown files</li>
+            <li>Atom feed</li>
+          </ul>
+        </div>
+        <div class="project-screenshots">
+          <h2>This is where the screenshots will go</h2>
+        </div>
+      </div>
+      <div class="project" id="balladmonger">
+        <div class="project-description">
+          <h2><a href="http://balladmonger.kylerjohnston.com">Balladmonger</a></h2>
+          <small class="project-subheading">November&ndash;December 2015 <a href="https://github.com/kylerjohnston/balladmonger">View source code</a></small>
+          <p>Balladmonger is a small web app built with Python and Flask which uses Markov chains to dynamically generate poems&mdash;or “ballads”&mdash;based on one or more training texts. The instance deployed on Heroku is trained on <i>King Lear</i> and about two dozen other texts derived from or influenced by <i>King Lear</i>, ranging from early modern ballads to <i>Sense and Sensibility</i> to twenty-first century fanfiction. I developed it for a seminar exploring Shakespearean remediations and the early modern ballad form as an attempt to remediate the early modern ballad aesthetic into a twenty-first century web app.</p>
+          <h3>Features</h3>
+          <ul class="feature-list">
+            <li>RESTful API</li>
+            <li>Responsive UI</li>
+          </ul>
+        </div>
+        <div class="project-screenshots">
+          <h2>This is where the screenshots will go</h2>
+        </div>
+      </div>
+    </section>
+    <section id="skills">
+      <div class="description">
+        <h2>Skills</h2>
+        <dl>
+          <dt>Coding</dt>
+          <dd>Python, Javascript and jQuery, shell scripting, R</dd>
+          <dt>Libraries</dt>
+          <dd>Flask, d3.js*, React*</dd>
+          <dt>UI/UX</dt>
+          <dd>HTML, CSS and SASS, Bootstrap, responsive design principles</dd>
+          <dt>Technologies</dt>
+          <dd>Linux, git, SQL, Nginx</dd>
+        </dl>
+        <small class="footnote">* Still learning!</small>
+      </div>
+    </section>
+    <section id="contact">
+      <div class="description">
+        <h2>Contact</h2>
+        <dl>
+          <dt>Github</dt>
+          <dd><a href="https://github.com/kylerjohnston">kylerjohnston</a></dd>
+          <dt>Email</dt>
+          <dd>me@iamkyle.me</dd>
+        </dl>
+      </div>
+    </section>
+    <footer>
+      <p>&copy; 2016 Kyle Johnston.</p>
+      <p>Library photo courtesy of <a href="http://barnimages.com">barnimages.com</a>.</p>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='js/portfolio.js') }}"></script>
+  </body>
+</html>

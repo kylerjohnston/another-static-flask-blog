@@ -105,6 +105,10 @@ def atom_feed():
                  published=postdate)
     return feed.get_response()
 
+@main.route('/portfolio')
+def portfolio():
+    return render_template('portfolio.html')
+
 if app.config['SHOW_DRAFTS']:
     @main.route('/drafts')
     def drafts():
