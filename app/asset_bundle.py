@@ -18,5 +18,6 @@ portfolio_css = Bundle('scss/portfolio/imports.scss',
                        'scss/portfolio/base.scss',
                        'scss/portfolio/layout.scss',
                        'scss/portfolio/typography.scss',
+                       'scss/portfolio/window.scss',
                        filters = 'scss,cssutils',
                        output = 'gen/portfolio.css')

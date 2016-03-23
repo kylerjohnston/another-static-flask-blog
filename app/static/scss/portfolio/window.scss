@@ -1,0 +1,94 @@
+.window {
+  width: 75%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.titlebar {
+  width: 100%;
+  height: 30px;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.0, #ebebeb, color-stop(1.0, #d5d5d5)));
+  background: -webkit-linear-gradient(top, #ebebeb, #d5d5d5);
+  background: -moz-linear-gradient(top, #ebebeb, #d5d5d5);
+  background: -ms-linear-gradient(top, #ebebeb, #d5d5d5);
+  background: -o-linear-gradient(top, #ebebeb, #d5d5d5);
+  background: linear-gradient(top, #ebebeb, #d5d5d5);
+  margin: 0;
+  padding: 0;
+  border-radius: 4px 4px 0px 0px;
+  -moz-border-radius: 4px 4px 0px 0px;
+  -webkit-border-radius: 4px 4px 0px 0px;
+  border: 0px solid #000000;
+}
+
+.buttons {
+  padding: 10px 0px 12px 10px;
+  margin: 0;
+}
+
+.red-button, .yellow-button, .green-button {
+  width: 12px;
+  height: 12px;
+  margin: 0 0 10px 0;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.red-button {
+  background: #ff5c5c;
+}
+
+.yellow-button {
+  background: #ffbd4c;
+}
+
+.green-button {
+  background: #00ca56;
+}
+
+.window-body {
+  position: relative;
+  margin-top: -20px;
+  width: 100%;
+}
+
+.screenshot {
+  width: 100%;
+  height: auto;
+}
+
+@media only screen and (min-width: 320px) {
+  .window {
+    height: 150px;
+  }
+}
+
+@media only screen and (min-width: 375px) {
+  .window {
+    height: 175px;
+  }
+}
+
+@media only screen and (min-width: 414px) {
+  .window {
+    height: 200px;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .window {
+    height: 350px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .window {
+    height: 283px;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .window {
+    height: 400px;
+  }
+}

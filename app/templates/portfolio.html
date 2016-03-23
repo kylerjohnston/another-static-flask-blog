@@ -22,7 +22,6 @@
       </ul>
     </div>
     <section id="about">
-      <!-- Background image from http://barnimages.com/bookstore/ -->
       <h1>Kyle R. Johnston</h1>
       <small class="subheading">Writer, researcher, full stack web developer</small>
       <p>I’m a freelance, full-stack web developer and a graduate student in the English department at the University of Illinois at Urbana-Champaign where I research literary-historical trends using quantitative methods such as text-mining and topic modeling.</p>
@@ -48,7 +47,18 @@
           </ul>
         </div>
         <div class="project-screenshots">
-          <h2>This is where the screenshots will go</h2>
+          <div class="window">
+            <div class="titlebar">
+              <div class="buttons">
+                <div class="red-button"></div>
+                <div class="yellow-button"></div>
+                <div class="green-button"></div>
+              </div>
+              <div class="window-body">
+                <img src="{{ url_for('static', filename='img/portfolio/todayiread-full.png') }}" class="screenshot" alt="todayiread.xyz screenshot">
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div class="project" id="sethbaker">
@@ -64,7 +74,18 @@
           </ul>
         </div>
         <div class="project-screenshots">
-          <h2>This is where the screenshots will go</h2>
+          <div class="window">
+            <div class="titlebar">
+              <div class="buttons">
+                <div class="red-button"></div>
+                <div class="yellow-button"></div>
+                <div class="green-button"></div>
+              </div>
+              <div class="window-body">
+                <img src="{{ url_for('static', filename='img/portfolio/sethbaker-full.png') }}" class="screenshot" alt="todayiread.xyz screenshot">
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div class="project" id="iamkyle">
@@ -80,14 +101,25 @@
           </ul>
         </div>
         <div class="project-screenshots">
-          <h2>This is where the screenshots will go</h2>
+          <div class="window">
+            <div class="titlebar">
+              <div class="buttons">
+                <div class="red-button"></div>
+                <div class="yellow-button"></div>
+                <div class="green-button"></div>
+              </div>
+              <div class="window-body">
+                <img src="{{ url_for('static', filename='img/portfolio/iamkyle-full.png') }}" class="screenshot" alt="todayiread.xyz screenshot">
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div class="project" id="balladmonger">
         <div class="project-description">
           <h2><a href="http://balladmonger.kylerjohnston.com">Balladmonger</a></h2>
           <small class="project-subheading">November&ndash;December 2015 <a href="https://github.com/kylerjohnston/balladmonger">View source code</a></small>
-          <p>Balladmonger is a small web app built with Python and Flask which uses Markov chains to dynamically generate poems&mdash;or “ballads”&mdash;based on one or more training texts. The instance deployed on Heroku is trained on <i>King Lear</i> and about two dozen other texts derived from or influenced by <i>King Lear</i>, ranging from early modern ballads to <i>Sense and Sensibility</i> to twenty-first century fanfiction. I developed it for a seminar exploring Shakespearean remediations and the early modern ballad form as an attempt to remediate the early modern ballad aesthetic into a twenty-first century web app.</p>
+          <p>Balladmonger is a small web app built with Python and Flask which uses Markov chains to dynamically generate poems&mdash;or “ballads”&mdash;based on one or more training texts. The instance deployed on Heroku is trained on <i>King Lear</i> and about two dozen other texts derived from or influenced by <i>King Lear</i>, ranging from early modern ballads to <i>Sense and Sensibility</i> to twenty-first century fanfiction. I developed it for a graduate seminar exploring the relationships between Shakespeare and early modern ballads as an attempt to remediate the early modern ballad aesthetic into a twenty-first century web app.</p>
           <h3>Features</h3>
           <ul class="feature-list">
             <li>RESTful API</li>
@@ -95,7 +127,18 @@
           </ul>
         </div>
         <div class="project-screenshots">
-          <h2>This is where the screenshots will go</h2>
+          <div class="window">
+            <div class="titlebar">
+              <div class="buttons">
+                <div class="red-button"></div>
+                <div class="yellow-button"></div>
+                <div class="green-button"></div>
+              </div>
+              <div class="window-body">
+                <img src="{{ url_for('static', filename='img/portfolio/balladmonger-full.png') }}" class="screenshot" alt="todayiread.xyz screenshot">
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -122,7 +165,7 @@
           <dt>Github</dt>
           <dd><a href="https://github.com/kylerjohnston">kylerjohnston</a></dd>
           <dt>Email</dt>
-          <dd>me@iamkyle.me</dd>
+          <dd>me at iamkyle dot me</dd>
         </dl>
       </div>
     </section>
