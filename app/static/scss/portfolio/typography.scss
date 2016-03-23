@@ -37,27 +37,27 @@ h3 {
 
 #sethbaker {
   color: $one;
-  background-color: $two-active;
+  background: $two-active url('/static/img/portfolio/maine.svg') no-repeat center;
 }
 
 #todayiread {
   color: $one;
-  background-color: $three-active;
+  background: $three-active url('/static/img/portfolio/bars.png') space center;
 }
 
 #balladmonger {
   color: $one;
-  background-color: $three-active;
+  background: $three-active url('/static/img/portfolio/jollyfellow.svg') no-repeat center;
 }
 
 #iamkyle {
   color: $one;
-  background-color: $four;
+  background: $four url('/static/img/portfolio/imac.png') space center;
 }
 
 #skills {
   color: $one;
-  background-color: $two-active;
+  background: $two-active url('/static/img/portfolio/python.svg') space center; 
 }
 
 #contact {
@@ -234,7 +234,7 @@ footer {
   font-family: $mainfont;
   font-weight: 200;
   font-size: 0.9em;
-  line-height: 1.1;
+  line-height: 1.3;
   text-align: center;
 }
 
@@ -261,5 +261,12 @@ footer a:hover {
 @media only screen and (min-width: 801px) {
   .sticky a, .nav-menu a {
     font-size: 1.25em;
+  }
+  #skills {
+    color: $one;
+    background-color: $two-active; 
+    background-image: url('/static/img/portfolio/python.svg'), url('/static/img/portfolio/js.svg');
+    background-position: left, right;
+    background-repeat: no-repeat, no-repeat;
   }
 }
