@@ -14,10 +14,7 @@ css = Bundle('scss/base.scss',
              filters = 'scss,cssutils,cssrewrite',
              output = 'gen/packed.css')
 
-portfolio_css = Bundle('scss/portfolio/imports.scss',
-                       'scss/portfolio/base.scss',
-                       'scss/portfolio/layout.scss',
-                       'scss/portfolio/typography.scss',
-                       'scss/portfolio/window.scss',
+portfolio_css = Bundle('scss/portfolio/base.scss',
+                       depends = 'scss/portfolio/*.scss',
                        filters = 'scss,cssutils',
                        output = 'gen/portfolio.css')

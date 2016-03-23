@@ -1,8 +1,13 @@
-$purple: #2D2864;
-$fg: #d3bcc0;
-$pink-white: #F2D7EE;
-$pink: #A5668B;
-$mauve: #69306D;
+@import url(https://fonts.googleapis.com/css?family=Work+Sans:200,400);
+
+$one: #f1efe2;
+$one-active: #fdfdfc;
+$two: #9ABA93;
+$two-active: #8aa784;
+$three: #84A9C0;
+$three-active: #698799;
+$four: #6A66A3;
+$five: #2D2864;
 
 $mainfont: 'Work Sans', Helvetica, sans-serif;
 
@@ -28,3 +33,7 @@ $mainfont: 'Work Sans', Helvetica, sans-serif;
   border-bottom: 1px solid $color;
   @include transition(all, 0.25s);
 }
+
+@import 'layout';
+@import 'typography';
+@import 'window';
