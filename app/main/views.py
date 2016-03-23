@@ -24,7 +24,7 @@ def page_test(page_num):
         older_pages = False
     return older_pages, newer_pages
 
-@main.route('/')
+@main.route('/blog')
 def blog():
     older_pages, newer_pages = page_test(1)
     return render_template('blog.html',
@@ -54,12 +54,6 @@ def about():
     return render_template('static.html',
                            description = 'Kyle Johnston is a coder, teacher, writer, and a researcher of 19th-century British literature at the University of Illinois at Urbana-Champaign.',
                            post = flatpages.get_or_404('about'))
-
-@main.route('/projects')
-def projects():
-    return render_template('static.html',
-                           description = "Kyle Johnston's web development portfolio.",
-                           post = flatpages.get_or_404('projects'))
 
 @main.route('/tags/<tag>')
 def view_tag(tag):
@@ -105,7 +99,7 @@ def atom_feed():
                  published=postdate)
     return feed.get_response()
 
-@main.route('/portfolio')
+@main.route('/')
 def portfolio():
     return render_template('portfolio.html')
 
