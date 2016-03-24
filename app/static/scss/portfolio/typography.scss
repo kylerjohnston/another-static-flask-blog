@@ -48,6 +48,7 @@ h3 {
 #balladmonger {
   color: $one;
   background: $three-active url('/static/img/portfolio/jollyfellow.svg') no-repeat center;
+  background-size: contain;
 }
 
 #iamkyle {
