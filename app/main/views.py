@@ -83,7 +83,7 @@ def archive():
 
 @main.route('/pygments.css')
 def pygments_css():
-    return pygments_style_defs('friendly'), 200, {'Content-Type': 'text/css'}
+    return pygments_style_defs('monokai'), 200, {'Content-Type': 'text/css'}
 
 @main.route('/recent.atom')
 def atom_feed():
