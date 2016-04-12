@@ -7,7 +7,7 @@ In a couple months I'm going to finish my Master's degree, and then I'm going to
 
 The question is how big of a truck I'm going to need. Penske has a 12 ft.-truck with `450 cu. ft.` of loading space and a 16 ft.-truck with `800 cu. ft.` of loading space for the same price. Before I reserve a truck, I want to get a sense of how much stuff I'm actually moving: though they're both the same price, I'd rather drive the smaller truck cross-country if it's possible.
 
-So I opened up Google Docs, got out a tape measure, and made a spreadsheet of the dimensions of all of the things I might want to move them. You can see the complete spreadsheet as a CSV file [here]({{ url_for('static', filename='data/moving_data.csv') }}).
+So I opened up Google Docs, got out a tape measure, and made a spreadsheet of the dimensions of all of the things I might want to move them. You can see the complete spreadsheet as a CSV file [here]({{ url_for('static', filename='data/moving_data.csv') }}). Geometry was never my strongest subject, but this seems like a problem easy enough to get a handle on with some simple code.
 
 I read the CSV file into a Javascript object and wrote some quick functions to calculate the cubic footage of each item and sum a specific property in an array of objects.
     
@@ -29,11 +29,9 @@ I read the CSV file into a Javascript object and wrote some quick functions to c
     }
 
     function sumProperty(prop, arr) {
-      var total = 0;
-      for (i in arr) {
-        total += arr[i][prop];
-      }
-      return total;
+      return arr.reduce(function(a, b) {
+        return a + b[prop];
+      }, 0);
     }
 
 It turns out I have `370 cubic feet` of stuff. That's good! Volume-wise, it can all fit in the smaller 12 ft.-truck.

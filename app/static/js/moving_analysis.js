@@ -63,11 +63,14 @@ function sqInToSqFt(sqIn) {
 }
 
 function sumProperty(prop, arr) {
-  var total = 0;
+  return arr.reduce(function(a, b) {
+    return a + b[prop];
+  }, 0);
+  /*var total = 0;
   for (i in arr) {
     total += arr[i][prop];
   }
-  return total;
+  return total;*/
 }
 
 function rotateFootprints(arr, item) {
