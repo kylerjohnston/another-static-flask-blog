@@ -103,6 +103,10 @@ def atom_feed():
 def portfolio():
     return render_template('portfolio.html')
 
+@main.route('/resume')
+def resume():
+    return render_template('resume.html')
+
 if app.config['SHOW_DRAFTS']:
     @main.route('/drafts')
     def drafts():

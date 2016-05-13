@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Kyle Robert Johnston</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/font-awesome-4.5.0/css/font-awesome.min.css') }}">
+    {% assets "resume_css" %}
+    <link rel="stylesheet" href="{{ ASSET_URL }}">
+    {% endassets %}
+  </head>
+  <body>
+    <div class="title-left">
+      <div class="name-header">
+        <h1>Kyle Johnston</h1>
+        <small class="sub">JavaScript developer and writer</small>
+        <ul class="nav">
+          <li><a class="nav-link" href="{{ url_for('main.resume') }}#about">About</a></li>
+          <li><a class="nav-link" href="{{ url_for('main.resume') }}#skills">Skills</a></li>
+          <li><a class="nav-link" href="{{ url_for('main.resume') }}#projects">Projects</a></li>
+          <li><a class="nav-link" href="{{ url_for('main.resume') }}#publications">Publications</a></li>
+          <li><a class="nav-link" href="{{ url_for('main.blog') }}">Blog</a></li>
+        </ul>
+        <ul class="nav icons">
+          <li><a class="icon email" href="mailto:me@kylerjohnston.com"><i class="fa fa-envelope"></i></a></li>
+          <li><a class="icon github" href="https://github.com/kylerjohnston"><i class="fa fa-github"></i></a></li>
+        </ul>
+      </div>
+      <div class="footer">
+        <p>&copy; 2016</p>
+      </div>
+    </div>
+    <div class="content-right">
+      <div class="section" id="about">
+        <div class="section-name">
+          <h2>about</h2>
+        </div>
+        <div class="section-content">
+          <p>I’m a freelance, full stack web developer and a graduate student in the English department at the University of Illinois at Urbana-Champaign where I research literary-historical trends using quantitative methods such as text-mining and topic modeling.</p>
+          <p>My passion is solving problems with code. As I reach the end of my Master’s degree program, I’ve decided to leave the world of humanities academia to become a professional web developer. I believe web technologies have the potential to change our society for the better, and I want to be on the front lines spurring that change.</p>
+        </div>
+      </div>
+      <div class="section" id="skills">
+        <div class="section-name">
+          <h2>skills</h2>
+        </div>
+        <div class="section-content">
+          <dl>
+            <dt>Programming languages</dt>
+            <dd>JavaScript, Python, Bash, R</dd>
+            <dt>Libraries and frameworks</dt>
+            <dd>Flask, jQuery, React*</dd>
+            <dt>UI/UX</dt>
+            <dd>HTML, Bootstrap, CSS and SASS, responsive design principles</dd>
+            <dt>Technologies</dt>
+            <dd>Linux, git, SQL, Nginx</dd>
+          </dl>
+        </div>
+      </div>
+      <div class="section" id="projects">
+        <div class="section-name">
+          <h2>projects</h2>
+        </div>
+        <div class="section-content">
+          <h3><a class="header-link" href="http://todayiread.xyz">todayiread.xyz</a> <i class="fa fa-arrow-right"></i></h3>
+          <small class="content-sub"><a href="https://github.com/kylerjohnston/todayiread">View on Github</a></small>
+          <p>A web-app to track and visualize reading habits. Visualizations done with d3.js pulling data from a Flask-based RESTful API.</p>
+          <h3>sethbaker.me <i class="fa fa-arrow-right"></i></h3>
+          <p>A brochure site to promote Maine State Senate candidate Seth Baker. Admin interface can be used to create, edit, and delete blog entries.</p>
+          <h3>iamkyle.me <i class="fa fa-arrow-right"></i></h3>
+          <small class="content-sub"><a href="https://github.com/kylerjohnston/another-static-flask-blog">View on Github</a></small>
+          <p>A static blog and portfolio site generated from Markdown files using Flask-Frozen.</p>
+          <h3>Balladmonger <i class="fa fa-arrow-right"></i></h3>
+          <small class="content-sub"><a href="https://github.com/kylerjohnston/balladmonger">View on Github</a></small>
+          <p>A small web app that generates poems based on <i>King Lear</i> and related texts. Poem data is pulled from a Flask-based RESTful API.</p>
+        </div>
+      </div>
+      <div class="section" id="publications">
+        <div class="section-name">
+          <h2>publications</h2>
+        </div>
+        <div class="section-content">
+          <p>This is where I'll list my publications</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

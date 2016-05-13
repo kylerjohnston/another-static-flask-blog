@@ -1,0 +1,23 @@
+@import url(https://fonts.googleapis.com/css?family=Vollkorn:400,400italic,700);
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,300,200,100,500,600,700);
+
+// Fonts
+$serif-font: 'Vollkorn', serif;
+$sans-serif-font: 'Raleway', sans-serif;
+
+// Colors
+$primary: #3080e8;
+$darker-primary: #0750AE;
+$white: #fdfdfd;
+$light-grey: #fafafa;
+$dark-grey: #424242;
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@import 'layout';
+@import 'typography';

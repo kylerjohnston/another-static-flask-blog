@@ -17,3 +17,8 @@ css = Bundle('scss/base.scss',
 portfolio_css = Bundle('scss/portfolio/base.scss',
                        filters = 'scss,cssutils',
                        output = 'gen/portfolio.css')
+
+resume_css = Bundle('scss/resume/base.scss',
+                    filters = 'scss,cssutils',
+                    depends = 'scss/resume/*.scss',
+                    output = 'gen/resume.css')
