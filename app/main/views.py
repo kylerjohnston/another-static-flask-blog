@@ -100,10 +100,6 @@ def atom_feed():
     return feed.get_response()
 
 @main.route('/')
-def portfolio():
-    return render_template('portfolio.html')
-
-@main.route('/resume')
 def resume():
     return render_template('resume.html')
 

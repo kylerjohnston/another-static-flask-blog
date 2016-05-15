@@ -65,11 +65,14 @@ I make a `drafts/` directory and put my master Markdown file in it.
     csl: modern-language-association.csl
     ---
 
-    This is the body of your paper. You can cite stuff by referencing the citation ID in your bib file, like so [@milton-Paradise 1.102].
+    This is the body of your paper. You can cite stuff by referencing
+    the citation ID in your bib file, like so [@milton-Paradise 1.102].
 
     New paragraphs are separated by a blank line.
 
-    At the end of your paper, type the following to generate a Works Cited page from your bibliography using only sources you've cited in the paper.
+    At the end of your paper, type the following to generate a Works
+    Cited page from your bibliography using only sources you've cited in
+    the paper.
 
     \workscited
 
@@ -78,7 +81,11 @@ The metadata at the beginning of the file gives the template the necessary info 
 I compile my formatted documents to another subdirectory, `out/`. Open a terminal, change to the project's root directory, and run:
 
     :::bash
-    $ pandoc drafts/miltons-mistakes.md -o out/miltons-mistakes-seminar-02-16-16.pdf --latex-engine=xelatex --template=mla --filter pandoc-citeproc
+    $ pandoc drafts/miltons-mistakes.md \
+      -o out/miltons-mistakes-seminar-02-16-16.pdf \
+      --latex-engine=xelatex \
+      --template=mla \
+      --filter pandoc-citeproc
 
 The `-o out/miltons-mistake-seminar-02-16-16.pdf` flag tells Pandoc where to write the compiled document. `--latex-engine=xelatex` tells Pandoc to use XeLaTeX to compile the document. XeLaTeX ships with MacTeX---it has the advantage of being able to use your system fonts, something other LaTeX engines tend not to play nicely with. `--template=mla` tells Pandoc to use your MLA template. And finally `--filter pandoc-citeproc` will let Pandoc process your citations by passing them to its `pandoc-citeproc` tool.
 
