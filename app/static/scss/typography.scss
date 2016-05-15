@@ -218,10 +218,10 @@ code {
 }
 
 pre {
-  white-space: pre-wrap;
   font-family: $monospace-font;
   font-weight: 400;
   padding: 10px;
+  overflow-x: scroll;
 }
 
 /* Blockquotes ***************************************************************/
