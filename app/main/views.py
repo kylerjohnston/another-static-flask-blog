@@ -24,7 +24,7 @@ def page_test(page_num):
         older_pages = False
     return older_pages, newer_pages
 
-@main.route('/blog')
+@main.route('/blog/')
 def blog():
     older_pages, newer_pages = page_test(1)
     return render_template('blog.html',
@@ -33,7 +33,7 @@ def blog():
                            older_pages = False,
                            page_num = 1)
 
-@main.route('/pages/<num>')
+@main.route('/pages/<num>/')
 def pages(num):
     num = int(num)
     older_pages, newer_pages = page_test(num)
@@ -43,26 +43,26 @@ def pages(num):
                            older_pages = older_pages,
                            page_num = num)
 
-@main.route('/posts/<post_name>')
+@main.route('/posts/<post_name>/')
 def post(post_name):
     page = flatpages.get_or_404('posts/' + post_name)
     return render_template('post.html',
                            post = page)
 
-@main.route('/about')
+@main.route('/about/')
 def about():
     return render_template('static.html',
                            description = 'Kyle Johnston is a coder, teacher, writer, and a researcher of 19th-century British literature at the University of Illinois at Urbana-Champaign.',
                            post = flatpages.get_or_404('about'))
 
-@main.route('/tags/<tag>')
+@main.route('/tags/<tag>/')
 def view_tag(tag):
     tagged_posts = [post for post in content.posts if tag in post['tags']]
     return render_template('tag_results.html',
                            posts = tagged_posts,
                            tag = tag)
 
-@main.route('/tags')
+@main.route('/tags/')
 def view_tags():
     two_col_tags = []
     for x in range(0, len(content.tags), 2):
@@ -76,7 +76,7 @@ def view_tags():
                            two_col_tags = two_col_tags,
                            tags = content.tags)
 
-@main.route('/archive')
+@main.route('/archive/')
 def archive():
     return render_template('archive.html',
                            posts = content.posts)
