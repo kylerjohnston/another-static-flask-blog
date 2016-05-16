@@ -2,11 +2,16 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Kyle Johnston</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Kyle R. Johnston is a web developer and a writer.">
+    <title>Kyle R. Johnston</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/font-awesome-4.5.0/css/font-awesome.min.css') }}">
     {% assets "resume_css" %}
     <link rel="stylesheet" href="{{ ASSET_URL }}">
     {% endassets %}
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/favicons/favicon-196x196.png') }}" sizes="196x196">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/favicons/favicon-32x32.png') }}" sizes="32x32">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/favicons/favicon-16x16.png') }}" sizes="16x16">
   </head>
   <body>
     <div class="mobile-nav-menu">
