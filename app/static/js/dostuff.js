@@ -4,13 +4,14 @@ if(typeof jQuery === 'undefined') {
 };
 
 /* Highlight current page in nav menu */
-$(function(){
-  $("a#nav").each(function(){
-    if ($(this).prop("href") == window.location.href || $(this).prop("href") == window.location.href + 'index.html') {
-      $(this).addClass("selected");
-    }
-  });
-});
+(function highlightCurrentPage() {
+  var nav = document.getElementsByClassName('nav');
+  for (var i = 0; i < nav.length; i++) {
+    if (nav[i].href == window.location.href) {
+      nav[i].className += ' selected';
+    };
+  }
+})();
 
 // Mobile nav menu
 $(function() {
