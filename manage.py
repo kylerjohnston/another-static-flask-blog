@@ -41,13 +41,15 @@ def buildSitemap():
         f.write(template.render(pages = endpoints))
 
 def findHTML(directory):
+    base = os.path.join(basedir, 'app/build')
     endpoints = []
     subdirs = []
     contents = os.listdir(directory)
     for item in contents:
         path = os.path.join(directory, item)
         if item.endswith('.html'):
-            endpoints.append([path, getLastMod(path)])
+            url = path.replace(base, 'http://kylerjohnston.com')
+            endpoints.append([url, getLastMod(path)])
         if os.path.isdir(path):
             subdirs.append(path)
     
