@@ -13,13 +13,24 @@ if(typeof jQuery === 'undefined') {
   }
 })();
 
-// Mobile nav menu
-$(function() {
-  $(".menu").hide();
-  $("#menu-open").click(function() {
-    $(".menu").toggle();
+/* Hide/show mobile nav menu */
+(function hideShowMobileNav() {
+  var menu = document.getElementsByClassName('menu');
+  var menuOpen = document.getElementById('menu-open');
+  var menuClose = document.getElementById('menu-close');
+  menuClose.style.display = 'none';
+  menu[0].style.display = 'none';
+  menuOpen.addEventListener('click', function(event) {
+    menu[0].style.display = 'block';
+    menuClose.style.display = 'block';
+    menuOpen.style.display = 'none';
   });
-});
+  menuClose.addEventListener('click', function(event) {
+    menu[0].style.display = 'none';
+    menuClose.style.display = 'none';
+    menuOpen.style.display = 'block';
+  });
+})();
 
 // Add captions to images
 // Adapted from this stackoverflow post:

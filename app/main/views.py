@@ -1,4 +1,4 @@
-from flask import render_template, request
+from flask import render_template, request, current_app, make_response
 from flask_flatpages import pygments_style_defs
 from . import main
 from .. import flatpages, freezer

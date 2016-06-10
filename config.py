@@ -25,7 +25,8 @@ class Config:
     FLATPAGES_HTML_RENDERER = prerender_jinja
     FREEZER_DESTINATION_IGNORE = ['.gitignore',
                                   '.git/',
-                                  'CNAME']
+                                  'CNAME',
+                                  'robots.txt']
     FREEZER_BASE_URL = 'http://kylerjohnston.com/'
     FREEZER_IGNORE_404_NOT_FOUND = True # To generate /404.html
 

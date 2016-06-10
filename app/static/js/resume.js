@@ -22,9 +22,7 @@ var mobileNav = document.getElementById("mobile-nav");
 // This function works the mobile nav menu
 (function() {
   var about = document.getElementById("about");
-  console.log(about.offsetTop);
   window.addEventListener("scroll", function(event) {
-    console.log(window.scrollY);
     if (window.scrollY < about.offsetTop && navClose.style.display != "block") {
       navOpen.style.display = "none"
     }

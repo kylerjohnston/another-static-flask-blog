@@ -31,15 +31,16 @@
         </div>
         <div class="menu">
           <ul class="nav">
-            <li class="nav"><a href="{{ url_for('main.blog') }}" class="nav mobile-nav" id="nav">Blog</a></li>
-            <li class="nav"><a href="{{ url_for('main.archive') }}" class="nav mobile-nav" id="nav">Archive</a></li>
-            <li class="nav"><a href="{{ url_for('main.about') }}" class="nav mobile-nav" id="nav">About</a></li>
-            <li class="nav"><a href="{{ url_for('main.resume') }}" class="nav mobile-nav" id="nav">Portfolio</a></li>
-            <li class="nav"><a href="{{ url_for('main.atom_feed') }}" class="nav mobile-nav" id="nav"><i class="fa fa-rss-square"></i> Atom Feed</a></li>
+            <li class="nav"><a href="{{ url_for('main.blog') }}" class="nav" id="nav">Blog</a></li>
+            <li class="nav"><a href="{{ url_for('main.archive') }}" class="nav" id="nav">Archive</a></li>
+            <li class="nav"><a href="{{ url_for('main.about') }}" class="nav" id="nav">About</a></li>
+            <li class="nav"><a href="{{ url_for('main.resume') }}" class="nav" id="nav">Portfolio</a></li>
+            <li class="nav"><a href="{{ url_for('main.atom_feed') }}" class="nav" id="nav"><i class="fa fa-rss-square"></i> Atom Feed</a></li>
           </ul>
         </div>
         <div class="menu-button">
           <button id="menu-open"><i class="fa fa-bars"></i></button>
+          <button id="menu-close"><i class="fa fa-times"></i></button>
         </div>
       </div>
       {% block page_content %}{% endblock %}
