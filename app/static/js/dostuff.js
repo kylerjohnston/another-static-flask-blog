@@ -1,8 +1,3 @@
-// Check for jQuery
-if(typeof jQuery === 'undefined') {
-  document.write(unescape("%3Cscript src='/static/js/jquery-2.2.0.min.js' type='text/javascript'%3E%3C/script%3E"));
-};
-
 /* Highlight current page in nav menu */
 (function highlightCurrentPage() {
   var nav = document.getElementsByClassName('nav');
@@ -32,22 +27,47 @@ if(typeof jQuery === 'undefined') {
   });
 })();
 
-// Add captions to images
-// Adapted from this stackoverflow post:
-// http://stackoverflow.com/questions/19331362/using-an-image-caption-in-markdown-jekyll
-$(function() {
-  var caption;
-  $('img').each(function() {
-    caption = $(this).attr('alt');
-    url = $(this).attr('src');
-    if(caption != '') {
-      $(this).replaceWith('<figure><a href="' + url + '"><img src="' + url + '" alt="' + caption + '"></a><figcaption>' + caption + '</figcaption></figure>');
-    }
-  });
-});
+/* Add captions to images
+ * Adapted from this stackoverflow post:
+ * http://stackoverflow.com/questions/19331362/using-an-image-caption-in-markdown-jekyll
+*/
 
-// Add current date to copyright notice
-$(function() {
+(function addCaptionsToImages() {
+  var images = document.getElementsByTagName('img');
+  for (var i = 0; i < images.length; i++) {
+    var caption = images[i].alt;
+    var url = images[i].src;
+    if (caption != '') {
+      /*
+       * <figure>
+       *  <a href="{{ url }}"><img src=" {{ url }}" alt="{{ caption }}"></a>
+       *  <figcaption>{{ caption }}</figcaption>
+       * </figure>
+       *
+       */
+      var parent = images[i].parentNode;
+      var newFig = document.createElement('figure');
+      var newLink = document.createElement('a');
+      newLink.href = url;
+      var newImg = document.createElement('img');
+      newImg.src = url;
+      newImg.alt = caption;
+      newLink.appendChild(newImg);
+      var newFigCaption = document.createElement('figcaption');
+      newFigCaption.innerHTML = caption;
+      newFig.appendChild(newLink);
+      newFig.appendChild(newFigCaption);
+      parent.replaceChild(newFig, images[i]);
+    }
+  }
+})();
+
+/* Add current date to copyright notice */
+
+(function currentDateFooter() {
   var d = new Date();
-  $('span#current-year').replaceWith(d.getFullYear());
-});
+  var dateElement = document.getElementById('current-year');
+  var currentDate = document.createTextNode(d.getFullYear());
+  dateElement.appendChild(currentDate);
+})();
+
