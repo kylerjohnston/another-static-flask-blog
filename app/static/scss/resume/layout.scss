@@ -40,6 +40,16 @@ html, body {
   background-color: $light-grey;
 }
 
+.divider {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  height: 50%;
+  padding: 2em 3em 2em 0;
+  background-color: $primary;
+}
+
 .footer {
   position: absolute;
   left: 0;
@@ -103,10 +113,5 @@ html, body {
     position: fixed;
     width: 50%;
     left: 0;
-  }
-
-  .section-content {
-    border-top: 1px solid $dark-grey;
-    border-bottom: 1px solid $dark-grey;
   }
 }

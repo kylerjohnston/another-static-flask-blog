@@ -57,11 +57,22 @@ ul.icons {
   transform: rotate(-90deg);
 }
 
+h2.divider-text {
+  margin: 0 auto;
+  color: $light-grey;
+  font-size: 5em;
+  font-family: $sans-serif-font;
+  font-weight: 100;
+  padding: 0;
+  border: 0;
+  transform: none;
+}
+
 .content-right h3 {
   line-height: 0;
   font-weight: 400;
   font-style: italic;
-  font-size: 1.5em;
+  font-size: 1.4em;
   padding: 0.5em 0 0 0;
   margin: 0.5em 0 0.5em 0;
 }
