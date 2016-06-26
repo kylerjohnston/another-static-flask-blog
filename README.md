@@ -78,10 +78,8 @@ Markdown content files can contain the following YAML header variables:
 
 | Variable    | Description                                                   |
 |-------------|---------------------------------------------------------------|
-| `title`     | The title of the page. For blog posts, this will appear in    |
-|             | the `<title>` tag and as the title of the post.               |
-| `date`      | The date will appear under the title of blog posts. Must      |
-|             | in the format `%d %B %Y`, e.g. `01 January 2016`.             |
+| `title`     | The title of the page. For blog posts, this will appear in the `<title>` tag and as the title of the post.|
+| `date`      | The date will appear under the title of blog posts. Must be in the format `%d %B %Y`, e.g. `01 January 2016`.|
 | `tags`        | A list of tags for the blog post.                           |
 | `description` | Will be used as the meta description for the page.          |
 
