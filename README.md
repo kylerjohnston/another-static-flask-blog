@@ -4,9 +4,9 @@ Another Static Flask Blog
 Description
 -----------
 
-Another-Static-Flask-Blog is a custom-built static HTML blog generator written in Python and [Flask](http://flask.pocoo.org). Its design was inspired by a couple blog posts ([this one from nicolas.perriault.net](https://nicolas.perriault.net/code/2012/dead-easy-yet-powerful-static-website-generator-with-flask/), [this one by James Harding](http://www.jamesharding.ca/posts/simple-static-markdown-blog-in-flask/), and [this one by Charles Leifer](http://charlesleifer.com/blog/how-to-make-a-flask-blog-in-one-hour-or-less/)), Miguel Grinberg’s excellent book [*Flask Web Development*](http://flaskbook.com), and my own experience with other static blog generators, like Jekyll and Pelican. 
+`another-static-flask-blog` is a static HTML blog generator written in Python and [Flask](http://flask.pocoo.org). Its design was inspired by blog posts [from nicolas.perriault.net](https://nicolas.perriault.net/code/2012/dead-easy-yet-powerful-static-website-generator-with-flask/), [James Harding](http://www.jamesharding.ca/posts/simple-static-markdown-blog-in-flask/), and [Charles Leifer](http://charlesleifer.com/blog/how-to-make-a-flask-blog-in-one-hour-or-less/)), Miguel Grinberg’s excellent book [*Flask Web Development*](http://flaskbook.com), and my own experience with other static blog generators, like [Jekyll](http://jekyllrb.com) and [Pelican](http://blog.getpelican.com). 
 
-**This is not intended for use as a template**. This repository reflects the code I use to build and publish my own blog, [kylerjohnston.com](http://kylerjohnston.com); as such it’s full of my own content, configurations, and Jinja2 templates. I’m publishing this as another example (in addition to the aforementioned blog posts) of how a static blog can be written in Flask. Use it for ideas. Fork it if you want and build off it! Just be aware you’ll have to dig around in the configurations and templates a bit to set things up for your particular needs. You’ll probably want to clean out the `app/content/` directory, at the very least...
+**This is not intended for use as a template**. This repository reflects the code I use to build and publish my own blog, [kylerjohnston.com](http://kylerjohnston.com); as such it’s full of my own content, configurations, and Jinja2 templates. I’m publishing this as another example (in addition to the aforementioned blog posts) of how a static blog can be written in Flask. Use it for ideas. Fork it if you want and build off it! Just be aware you’ll have to dig around in the configurations and templates a bit to set things up for your particular needs.
 
 Installation
 ------------
@@ -76,21 +76,16 @@ Most of the content on the site is parsed from Markdown files and rendered into 
 
 Markdown content files can contain the following YAML header variables:
 
-------------- -----------------------------------------------------------------
-Variable      Description
-------------- -----------------------------------------------------------------
-`title`       The title of the page. For blog posts, this will appear in
-              the `<title>` tag and as the title of the post.         
+| Variable    | Description                                                   |
+|-------------|---------------------------------------------------------------|
+| `title`     | The title of the page. For blog posts, this will appear in    |
+|             | the `<title>` tag and as the title of the post.               |
+| `date`      | The date will appear under the title of blog posts. Must      |
+|             | in the format `%d %B %Y`, e.g. `01 January 2016`.             |
+| `tags`        | A list of tags for the blog post.                           |
+| `description` | Will be used as the meta description for the page.          |
 
-`date`        The date will appear under the title of blog posts. Must
-              in the format `%d %B %Y`, e.g. `01 January 2016`.
-
-`tags`        A list of tags for the blog post.
-
-`description` Will be used as the meta description for the page.
-------------- -----------------------------------------------------------------
-
-YAML variables should go at the top of the document and be separated from the content by a single new line. A blog post, for example, would look like:
+YAML variables should go at the top of the document and be separated from the content by a single new line. A blog post, for example, looks like:
 
 ```
 title: My blog post
