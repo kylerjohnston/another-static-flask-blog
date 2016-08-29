@@ -77,6 +77,15 @@ h2.divider-text {
   margin: 0.5em 0 0.5em 0;
 }
 
+a.footer-link {
+  color: $white;
+  text-decoration: underline;
+}
+
+a.footer-link:hover {
+  color: $primary;
+}
+
 a.nav-link {
   color: $light-grey;
   text-decoration: none;
@@ -111,7 +120,7 @@ a.icon {
   text-align: center;
   font-family: $sans-serif-font;
   font-size: 0.8em;
-  font-weight: 100;
+  font-weight: 400;
 }
 
 .section-content a {
@@ -122,12 +131,12 @@ a.icon {
 }
 
 .content-sub {
-  line-height: 0;
+  line-height: 1;
   display: block;
   font-size: 0.9em;
   font-family: $serif-font;
   font-weight: 400;
-  padding: 0 0 1em 0;
+  padding: 0.25em 0 0.25em 0;
 }
 
 .content-sub a {

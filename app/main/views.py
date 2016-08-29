@@ -55,6 +55,10 @@ def about():
                            description = 'Kyle Johnston is a coder, teacher, writer, and a researcher of 19th-century British literature at the University of Illinois at Urbana-Champaign.',
                            post = flatpages.get_or_404('about'))
 
+@main.route('/wordtables/')
+def wordtables():
+    return render_template('wordtables.html')
+
 @main.route('/tags/<tag>/')
 def view_tag(tag):
     tagged_posts = [post for post in content.posts if tag in post['tags']]
