@@ -105,7 +105,7 @@ def atom_feed():
 
 @main.route('/')
 def resume():
-    return render_template('resume.html')
+    return render_template('landing.html')
 
 if app.config['SHOW_DRAFTS']:
     @main.route('/drafts')
