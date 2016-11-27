@@ -1,6 +1,6 @@
 title: Hi, I’m Kyle.
 
-I'm a specter haunting Facebook.
+I'm a specter haunting... something.
 
 I like computer-y things, Karl Marx, and nineteenth century novels.
 
